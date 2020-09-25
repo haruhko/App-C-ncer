@@ -1,0 +1,27 @@
+
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons
+        slot="start">
+            <ion-button
+            (click)="toggleMenu()">
+                <ion-icon
+                slot="icon-only"
+                name="menu"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center">INICIO (PERFIL)</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <img src="assets/img/avatar1.svg" width="150px" />
+    <h2>APP CÁNCER</h2>
+<p>Hola "NOMBRE DE USUARIO". Nuestra aplicación te ayudara a conocer más de tu experiencia
+    y dar un mejor manejo a tu enfermedad.
+</p>
+<p>USERNAME:andres@test.com PASSWORD:123456</p>
+
+<ion-button   routerLink="/registro">registro</ion-button>
+<ion-button   (click)="Onlogout()">salir</ion-button>
+    
+</ion-content>

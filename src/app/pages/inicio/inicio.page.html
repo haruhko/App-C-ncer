@@ -1,0 +1,122 @@
+
+<ion-header class="ion-no-border">
+   <ion-toolbar color="tertiary">
+  <div>
+    <img src="assets/img/logo.png" height="80px" />
+  </div>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content 
+fullscreen="true"
+color="secondary">
+  <div>
+    <ion-title class="ion-text-center custom-font">APP CÁNCER</ion-title>
+  </div>
+  <div>
+    <p class="ion-text-center custom-font">
+      Nuestra aplicación te ayudará a conocer <br> más de tu experiencia y dar un mejor <br>manejo a tu enfermedad.
+    </p>
+  </div>
+  
+
+    <ion-list 
+    lines="none"
+    class="list"
+    >
+      <ion-item color="secondary">
+        <ion-input
+        [(ngModel)]="email" 
+        placeholder="Correo electrónico"
+        color="light"
+        class="input"
+        type="email"></ion-input>
+      </ion-item>
+
+      <br>
+
+      <ion-item
+      color="secondary">
+    <ion-input
+        [(ngModel)]="password" 
+        placeholder="Contraseña"
+        color="light"
+        class="input"
+        type="password" 
+        name="password">
+       </ion-input>
+     
+      </ion-item>
+     </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col 
+      size="8" 
+      offset="3.5">
+        <ion-button 
+        color="success"
+        (click)="OnSubmitLogin()" 
+        mode="ios"
+        class="btn-success"
+        >
+          INGRESAR</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col 
+      size="8" 
+      offset="3.5"
+      >
+        <ion-button 
+        color="danger"
+        routerLink="/registro" 
+        mode="ios"
+        class="btn-danger"
+        >
+          REGISTRO</ion-button> 
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="ion-text-center ion-margin-top">
+    <a routerLink="/registro"><small
+      class="le">Olvidé mi Contraseña</small></a>
+  </div>
+    
+</ion-content>
+
+<ion-footer class="ion-no-border"
+color="secondary">
+
+</ion-footer>
+<!--
+   The core Firebase JS SDK is always required and must be listed first 
+<script src="/__/firebase/7.21.0/firebase-app.js"></script>
+
+TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries 
+<script src="/__/firebase/7.21.0/firebase-analytics.js"></script>
+
+ Initialize Firebase
+<script src="/__/firebase/init.js"></script>
+-->
+    
+    
+
+  
+  
+    
+    
+    
+  
+    
+  
+
+  
+
+  
+  
+
+  
+ 
