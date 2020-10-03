@@ -9,9 +9,207 @@
               name="menu"></ion-icon>
           </ion-button>
       </ion-buttons>
-      <ion-title class="ion-text-center">Calendario</ion-title>
+      <ion-title class="ion-text-center">Mi Calendario</ion-title>
+
+      <ion-buttons slot="end">
+        <ion-button (click)="openCalModal()">
+            <ion-icon name="add" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <ion-content>
+    
 
+    <ion-segment [(ngModel)]="calendar.mode">
+
+        <ion-segment-button value="month">
+            <ion-label>
+                Mes
+            </ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button value="week">
+            <ion-label>
+                Semana
+            </ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button value="day">
+            <ion-label>
+                Día
+            </ion-label>
+        </ion-segment-button>
+
+    </ion-segment>
+<!--
+    <ion-row>
+        <ion-col size="6">
+            <ion-button (click)="createRandomEvents()" 
+            expand="block"
+            fill="outline">
+        Add random events
+        </ion-button>
+        </ion-col>
+
+        <ion-col size="6">
+            <ion-button (click)="removeEvents()" 
+            expand="block"
+            fill="outline">
+        Remove all events
+        </ion-button>
+        </ion-col>
+    </ion-row>
+-->
+
+
+    <ion-row>
+        <ion-col size="2">
+            <ion-button fill="clear" (click)="back()">
+                <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-col>
+
+        <ion-col size="8" class="ion-text-center">
+         <h2>{{ viewTitle }}</h2>
+        </ion-col>
+
+        <ion-col size="2">
+            <ion-button fill="clear" (click)="next()">
+                <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-col>
+    </ion-row>
+
+    <calendar
+        [eventSource]="eventSource"
+        [calendarMode]="calendar.mode"
+        [currentDate]="calendar.currentDate"
+        (onEventSelected)="onEventSelected($event)"
+        (onTitleChanged)="onViewTitleChanged($event)"
+        startHour="6"
+        endHour="20"
+        step="30"
+        startingDayWeek="1"
+        [monthviewDisplayEventTemplate]="template"
+    >
+    </calendar>
+
+    <ng-template #template let-view="view" let-row="row" let-col="col">
+        <div [class.with-event]="view.dates[row*7+col].events.length">
+          {{view.dates[row*7+col].label}}
+          <div class="indicator-container">
+            <div class="event-indicator" *ngFor="let e of view.dates[row*7+col].events"></div>
+          </div>
+        </div>
+      </ng-template>
+
+      <ion-row>
+        <ion-col size="6">
+            <ion-button (click)="createRandomEvents()" 
+            expand="block"
+            color="secondary">
+        Agregar eventos 
+        </ion-button>
+        </ion-col>
+
+        <ion-col size="6">
+            <ion-button (click)="removeEvents()" 
+            expand="block"
+            color="secondary">
+        Quitar eventos
+        </ion-button>
+        </ion-col>
+    </ion-row>
+  
+    
+    <div>
+        <h6>Medicamento</h6>
+        <ion-list>
+            <ion-item>
+                <ion-label>Medicamento</ion-label>
+                <ion-select>
+                    <ion-select-option>1</ion-select-option>
+                    <ion-select-option>2</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Fecha de inicio:</ion-label>
+                <ion-datetime></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label>Hora de inicio:</ion-label>
+                <ion-datetime
+                displayFormat="h:mm a"></ion-datetime>
+            </ion-item>
+        </ion-list>
+        <ion-button>Guardar</ion-button>
+        <ion-button>Cancelar</ion-button>
+    </div>
+
+    <div>
+        <h6>Cita médica:</h6>
+        <ion-list>
+            <ion-item>
+                <ion-label>Médico</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Lugar</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Dirección</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Fecha:</ion-label>
+                <ion-datetime></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label>Hora:</ion-label>
+                <ion-datetime
+                displayFormat="h:mm a"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label>Observación:</ion-label>
+                <ion-textarea></ion-textarea>
+            </ion-item>
+        </ion-list>
+        <ion-button>Guardar</ion-button>
+        <ion-button>Cancelar</ion-button>
+    </div>
+
+    <div>
+        <h6>Exámen:</h6>
+        <ion-list>
+            <ion-item>
+                <ion-label>Exámen</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Lugar</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Dirección</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Fecha:</ion-label>
+                <ion-datetime></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label>Hora:</ion-label>
+                <ion-datetime
+                displayFormat="h:mm a"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label>Observación:</ion-label>
+                <ion-textarea></ion-textarea>
+            </ion-item>
+        </ion-list>
+        <ion-button>Guardar</ion-button>
+        <ion-button>Cancelar</ion-button>
+    </div>
 </ion-content>

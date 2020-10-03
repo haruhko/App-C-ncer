@@ -7,7 +7,12 @@ const routes: Routes = [
   {
     path: '',
     component: SintomasSicologicosPage
+  },
+  {
+    path: 'estadisticas2',
+    loadChildren: () => import('./estadisticas2/estadisticas2.module').then( m => m.Estadisticas2PageModule)
   }
+ 
 ];
 
 @NgModule({

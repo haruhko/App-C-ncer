@@ -24,3 +24,18 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.cal-modal {
+    --height: 80%;
+    --border-radius: 10px;
+    padding: 25px;
+}
+@font-face{
+    font-family: Ancizar;
+    src : url('assets/fonts/ancizar_sans-regular-webfont.woff')
+}
+
+//@font-face{
+    //font-family: Ancizar_bold;
+   // src : url('ancizarsans_bold-webfont.ttf')
+//}

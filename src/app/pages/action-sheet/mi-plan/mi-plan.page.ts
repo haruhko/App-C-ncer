@@ -12,6 +12,9 @@ export class MiPlanPage implements OnInit {
 
   ngOnInit() {
   }
+  Add(){
+    
+  }
   toggleMenu(){
     this.menuCtrl.toggle();
   }

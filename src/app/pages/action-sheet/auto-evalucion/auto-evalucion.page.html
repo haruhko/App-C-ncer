@@ -13,5 +13,98 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
+<h2
+class="ion-text-center">Autoevaluación</h2>
+
+<h6>1.Mi nivel de conocimiento frente al cáncer es:</h6>
+
+<!--No se si colocarlo dentro de un ion-item-->
+  <ion-item>
+    <ion-col>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>0</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>1</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>2</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>3</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>4</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>5</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>6</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>7</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>8</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>9</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>10</ion-label>
+    </ion-col>
+  </ion-item>
+  <p>(0 a 10( 0 es nada 10 es alto))</p>
+<br>  
+<h6>1.Mi nivel de conocimiento frente al tratamiento para el cáncer es:</h6>
+<!--SEGUNDA OPCION
+ver como se le agregan los numeros al range-->
+
+<ion-item>
+  <ion-range 
+  min="1000" 
+  max="2000" 
+  step="100" 
+  snaps="true" 
+  color="dark">
+  </ion-range>
+</ion-item>
+<p>(0 a 10( 0 es nada 10 es alto))</p>
 
 </ion-content>
+
+<ion-footer>
+    <ion-grid>
+        <ion-row>
+          <ion-col
+          class="ion-align-self-start">
+            <div>
+                <ion-button 
+                color="success">
+                  Guardar
+                </ion-button> 
+            </div>
+          </ion-col>
+          <ion-col
+          class="ion-align-self-end">
+            <div>
+                <ion-button 
+                color="success">
+                  Regresar
+                </ion-button> 
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-footer>

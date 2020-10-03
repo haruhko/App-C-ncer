@@ -2,7 +2,7 @@
 <ion-header class="ion-no-border">
   <ion-toolbar color="tertiary">
  <div>
-   <img src="assets/img/logo.png" height="50px" />
+   <img src="assets/img/logowhite.png" height="50px" />
  </div>
   </ion-toolbar>
 </ion-header>
@@ -11,8 +11,7 @@
 <ion-content color="secondary">
    <ion-slides pager="true">
      <ion-slide>
-       <h2>REGISTRO</h2>
-       <h6>Información personal</h6>
+       <h4>Información personal</h4>
        <div>
         <ion-list 
         lines="none"
@@ -28,7 +27,7 @@
            class="input"
            ></ion-input>
           </ion-item>
-          <br>
+          
           <ion-item
           class="item"
           color="secondary">
@@ -40,7 +39,7 @@
             class="input"
             type="email"></ion-input>
           </ion-item>
-          <br>
+          
           <ion-item
           class="item"
           color="secondary">
@@ -52,7 +51,7 @@
             type="password"
             class="input"></ion-input>
           </ion-item>
-          <br>
+          
           <ion-item
           class="item"
           color="secondary">
@@ -62,86 +61,8 @@
             <ion-input placeholder="" 
             class="input"></ion-input>
           </ion-item>
-          <br>
+          
           <ion-item
-          class="item"
-          color="secondary">
-            <ion-label position="floating">
-              Fecha de nacimiento:
-            </ion-label>
-            <ion-datetime displayFormat="DD/MMM/YYYY"
-            placeholder="DD/MM/YYYY"
-            class="input"
-            Cancel-text="cancelar"
-            Done-text="Aceptar"></ion-datetime>
-          </ion-item>
-        </ion-list>
-       </div>
-     </ion-slide>
-
-
-     <ion-slide>
-      <h2>REGISTRO</h2>
-      <h6>Información personal</h6>
-      <div>
-       <ion-list 
-       lines="none"
-       class="list">
-         <ion-item 
-         class="item"
-         color="secondary">
-          <ion-label position="floating">
-            Sexo:
-          </ion-label>
-          <ion-select class="input"
-          placeholder=""
-          cancel-text="cancelar"
-          ok-text="aceptar">
-            <ion-select-option>Femenino</ion-select-option>
-            <ion-select-option>Masculino</ion-select-option>
-        </ion-select>
-         </ion-item>
-         <br>
-         <ion-item
-         class="item"
-         color="secondary">
-           <ion-label position="floating">
-             Tipo de documento:
-           </ion-label>
-           <ion-select class="input"
-          placeholder=""
-          cancel-text="cancelar"
-          ok-text="aceptar">
-              <ion-select-option>Tarjeta de identidad</ion-select-option>
-              <ion-select-option>Cedula de ciudadania</ion-select-option>
-              <ion-select-option>Pasaporte extranjero</ion-select-option>
-            </ion-select>
-         </ion-item>
-         <br>
-         <ion-item
-         class="item"
-         color="secondary">
-           <ion-label position="floating">
-             Numero de documento:
-           </ion-label>
-           <ion-input 
-           placeholder=""
-           class="input"></ion-input>
-         </ion-item>
-         <br>
-         <ion-item
-         class="item"
-         color="secondary">
-           <ion-label position="floating">
-             EPS:
-           </ion-label>
-           <ion-select class="input"
-          placeholder=""
-          cancel-text="cancelar"
-          ok-text="aceptar"></ion-select>
-         </ion-item>
-         <br>
-         <ion-item
          class="item"
          color="secondary">
            <ion-label position="floating">
@@ -152,14 +73,141 @@
            type="tel"
            class="input"></ion-input>
          </ion-item>
+         
+        </ion-list>
+       </div>
+     </ion-slide>
+
+
+     <ion-slide>
+      <h4>Información personal</h4>
+      <div>
+       <ion-list 
+       lines="none"
+       class="list">
+
+       <ion-item
+       class="item"
+       color="secondary">
+         <ion-label position="floating">
+           Fecha de nacimiento:
+         </ion-label>
+         
+         <ion-datetime displayFormat="DD/MMM/YYYY"
+         placeholder="DD/MM/YYYY"
+         class="input"
+         Cancel-text="cancelar"
+         Done-text="Aceptar">
+       </ion-datetime>
+       </ion-item>
+
+         <ion-item 
+         class="item"
+         color="secondary">
+          <ion-label position="floating">
+            Sexo:
+          </ion-label>
+          <ion-select class="input"
+          placeholder="seleccione"
+          cancel-text="cancelar"
+          ok-text="aceptar">
+            <ion-select-option>Femenino</ion-select-option>
+            <ion-select-option>Masculino</ion-select-option>
+        </ion-select>
+         </ion-item>
+         
+         <ion-item
+         class="item"
+         color="secondary">
+           <ion-label position="floating">
+             Tipo de documento:
+           </ion-label>
+           <ion-select class="input"
+          placeholder="seleccione"
+          cancel-text="cancelar"
+          ok-text="aceptar">
+              <ion-select-option>Cedula de ciudadania</ion-select-option>
+              <ion-select-option>Tarjeta de identidad</ion-select-option>
+              <ion-select-option>Registro civil </ion-select-option>
+              <ion-select-option>Pasaporte</ion-select-option>
+              <ion-select-option>Certificado nacido vivo</ion-select-option>
+              <ion-select-option>Cedula de extranjeria</ion-select-option>
+              <ion-select-option>Permiso especial de permanencia</ion-select-option>
+              <ion-select-option>Carnet diplomatico</ion-select-option>
+              <ion-select-option>Salvoconducto</ion-select-option>
+              <ion-select-option>Nit</ion-select-option>
+            </ion-select>
+         </ion-item>
+
+         <ion-item
+         class="item"
+         color="secondary">
+           <ion-label position="floating">
+             Numero de documento:
+           </ion-label>
+           <ion-input 
+           placeholder=""
+           class="input"></ion-input>
+         </ion-item>
+         
+         <ion-item
+         class="item"
+         color="secondary">
+           <ion-label position="floating">
+             EPS:
+           </ion-label>
+           <ion-select class="input"
+          placeholder="seleccione"
+          cancel-text="cancelar"
+          ok-text="aceptar">
+              <ion-select-option>AIC-EPSI</ion-select-option>
+              <ion-select-option>Aliansalud EPS</ion-select-option>
+              <ion-select-option>Ambuq EPS</ion-select-option>
+              <ion-select-option>Anas Wayuu</ion-select-option>
+              <ion-select-option>Asmet Salud EPS</ion-select-option>
+              <ion-select-option>Cajacopi EPS</ion-select-option>
+              <ion-select-option>Capital Salud EPS-S</ion-select-option>
+              <ion-select-option>Capresoca EPS</ion-select-option>
+              <ion-select-option>Comfachocó EPS-S</ion-select-option>
+              <ion-select-option>Comfacor</ion-select-option>
+              <ion-select-option>Comfaguajira</ion-select-option>
+              <ion-select-option>Comfamiliar EPS</ion-select-option>
+              <ion-select-option>Comfamiliar Cartagena</ion-select-option>
+              <ion-select-option>Comfamiliar Nariño</ion-select-option>
+              <ion-select-option>Comparta EPS-S</ion-select-option>
+              <ion-select-option>Compensar</ion-select-option>
+              <ion-select-option>Confasucre</ion-select-option>
+              <ion-select-option>Confaoriente EPS-S</ion-select-option>
+              <ion-select-option>Convisa EPS</ion-select-option>
+              <ion-select-option>Coomeva EPS</ion-select-option>
+              <ion-select-option>Coosalud</ion-select-option>
+              <ion-select-option>Cruz Blanca EPS</ion-select-option>
+              <ion-select-option>Dusakawi EPSi</ion-select-option>
+              <ion-select-option>Ecoopsos</ion-select-option>
+              <ion-select-option>Emssanar EPS</ion-select-option>
+              <ion-select-option>EPS Confenalco</ion-select-option>
+              <ion-select-option>EPS Sanitas</ion-select-option>
+              <ion-select-option>EPS S.O.S</ion-select-option>
+              <ion-select-option>Famisanar EPS</ion-select-option>
+              <ion-select-option>Mallamas EPS indigena</ion-select-option>
+              <ion-select-option>Medimas EPS</ion-select-option>
+              <ion-select-option>Mutual Ser</ion-select-option>
+              <ion-select-option>Nueva Eps</ion-select-option>
+              <ion-select-option>Pijaos Salud</ion-select-option>
+              <ion-select-option>Salud Total EPS</ion-select-option>
+              <ion-select-option>Savia Salud EPS</ion-select-option>
+              <ion-select-option>Sura EPS</ion-select-option>
+            </ion-select>
+         </ion-item>
+         
+         
        </ion-list>
       </div>
     </ion-slide>
 
 
      <ion-slide>
-      <h2>REGISTRO</h2>
-      <h6>Residencia</h6>
+      <h4>Información personal</h4>
       <div>
         <ion-list 
         lines="none"
@@ -171,43 +219,98 @@
               Departamento:
             </ion-label>
             <ion-select class="input"
-          placeholder=""
+          placeholder="seleccione"
           cancel-text="cancelar"
-          ok-text="aceptar"></ion-select>
+          ok-text="aceptar">
+        <ion-select-option>1</ion-select-option>
+        <ion-select-option>2</ion-select-option>
+        </ion-select>
           </ion-item>
-          <br>
+          
           <ion-item
           class="item"
           color="secondary">
             <ion-label position="floating">
               Municipio:
             </ion-label>
+            <ion-select class="input"
+          placeholder="seleccione"
+          cancel-text="cancelar"
+          ok-text="aceptar">
+        <ion-select-option>1</ion-select-option>
+        <ion-select-option>2</ion-select-option>
+        </ion-select>
+          </ion-item>
+
+          <br>
+
+          <ion-item
+          class="item"
+          color="secondary">
+            <ion-label position="floating">
+              Nombre:
+            </ion-label>
             <ion-input 
-            placeholder="" 
+            placeholder=""
             class="input"></ion-input>
           </ion-item>
-          <h6>Tu enfermedad</h6>
+
           <ion-item
+          class="item"
+          color="secondary">
+            <ion-label position="floating">
+              Celular:
+            </ion-label>
+            <ion-input 
+            placeholder=""
+            class="input"
+            type="tel"></ion-input>
+          </ion-item>
+          
+        </ion-list>
+      </div>
+    </ion-slide>
+
+
+    <ion-slide>
+      <h4>Datos sobre la enfermedad</h4>
+      <div>
+        <ion-list lines="none"
+        class="list">
+
+        <ion-item
           class="item"
           color="secondary">
             <ion-label position="floating">
               Tipo de cancer:
             </ion-label>
-            <ion-input 
-            placeholder="" 
-            class="input"></ion-input>
+            <ion-select class="input"
+            placeholder="seleccione"
+            cancel-text="cancelar"
+            ok-text="aceptar">
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          </ion-select>
+            
           </ion-item>
-          <br>
+
           <ion-item
           class="item"
           color="secondary">
             <ion-label position="floating">
-              Estadio</ion-label>
-            <ion-input 
-            placeholder="" 
-            class="input"></ion-input>
+              Estadio:</ion-label>
+              <ion-select class="input"
+          placeholder="seleccione"
+          cancel-text="cancelar"
+          ok-text="aceptar">
+        <ion-select-option>0</ion-select-option>
+        <ion-select-option>1</ion-select-option>
+        <ion-select-option>2</ion-select-option>
+        <ion-select-option>3</ion-select-option>
+        <ion-select-option>4</ion-select-option>
+        </ion-select>
           </ion-item>
-          <br>
+          
           <ion-item
           class="item"
           color="secondary">
@@ -220,18 +323,30 @@
             Cancel-text="cancelar"
             Done-text="Aceptar"></ion-datetime>
           </ion-item>
+
+          <ion-item
+          class="item"
+          color="secondary">
+            <ion-label position="floating">
+              Presencia de comorbilidades:
+            </ion-label>
+            <ion-input 
+            placeholder="" 
+            style="text-transform: capitalize;"
+            class="input"></ion-input>
+          </ion-item>
         </ion-list>
       </div>
+      
     </ion-slide>
 
-
-    <ion-slide>
-      <h2>REGISTRO</h2>
-      <h6>Contactos</h6>
-      <div>
-        <ion-list lines="none"
-        class="list">
-          <ion-item
+<ion-slide>
+  <h4>Contactos</h4>
+  <div>
+    <ion-list
+    lines="none"
+    class="list">
+      <ion-item
           class="item"
           color="secondary">
             <ion-label position="floating">
@@ -242,7 +357,7 @@
             style="text-transform: capitalize;"
             class="input"></ion-input>
           </ion-item>
-          <br>
+          
           <ion-item
           class="item"
           color="secondary">
@@ -254,7 +369,7 @@
             style="text-transform: capitalize;"
             class="input"></ion-input>
           </ion-item>
-          <br>
+          
           <ion-item
           class="item"
           color="secondary">
@@ -267,7 +382,7 @@
             class="input"
             ></ion-input>
           </ion-item>
-          <br>
+          
           <ion-item
           class="item"
           color="secondary">
@@ -279,14 +394,17 @@
             style="text-transform: capitalize;"
             class="input"></ion-input>
           </ion-item>
-        </ion-list>
-      </div>
-      <div>
-        <ion-button  color="success" routerLink="/action-sheet">Registrar</ion-button>
-        <br>
-        <ion-button  color="danger"  (click)="Onlogout()">Cancelar</ion-button>
-      </div>
-    </ion-slide>
+    </ion-list>
+  </div>
+  <div>
+    <ion-button  color="success" routerLink="/action-sheet">Registrar</ion-button>
+    <br>
+    <ion-button  color="danger"  (click)="Onlogout()">Cancelar</ion-button>
+  </div>
+  <br>
+  <br>
+</ion-slide>
+
    </ion-slides>
   
 </ion-content>

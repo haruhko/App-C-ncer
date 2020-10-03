@@ -28,7 +28,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule),
     canActivate: [AuthGuard]
   },
-  
+  {
+    path: 'cal-modal',
+    loadChildren: () => import('./pages/cal-modal/cal-modal.module').then( m => m.CalModalPageModule)
+  }
+ 
+ 
 ];
 
 @NgModule({
