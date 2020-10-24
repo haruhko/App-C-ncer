@@ -1,16 +1,9 @@
+<app-header></app-header>
 
-<ion-header class="ion-no-border">
-  <ion-toolbar color="tertiary">
- <div>
-   <img src="assets/img/logowhite.png" height="50px" />
- </div>
-  </ion-toolbar>
-</ion-header>
-
-
+<!--AGREGAR TOAST PARA EL BOTON DE GUARDAR-->
 <ion-content color="secondary">
    <ion-slides pager="true">
-     <ion-slide>
+     <ion-slide color="secondary">
        <h4>Información personal</h4>
        <div>
         <ion-list 
@@ -108,9 +101,9 @@
             Sexo:
           </ion-label>
           <ion-select class="input"
-          placeholder="seleccione"
-          cancel-text="cancelar"
-          ok-text="aceptar">
+          placeholder="Seleccione"
+          cancel-text="Cancelar"
+          ok-text="Aceptar">
             <ion-select-option>Femenino</ion-select-option>
             <ion-select-option>Masculino</ion-select-option>
         </ion-select>
@@ -408,3 +401,4 @@
    </ion-slides>
   
 </ion-content>
+<app-footer></app-footer>

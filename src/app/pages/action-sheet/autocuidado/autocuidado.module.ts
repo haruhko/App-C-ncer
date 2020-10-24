@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { AutocuidadoPageRoutingModule } from './autocuidado-routing.module';
 
 import { AutocuidadoPage } from './autocuidado.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AutocuidadoPageRoutingModule
+    AutocuidadoPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [AutocuidadoPage]
 })

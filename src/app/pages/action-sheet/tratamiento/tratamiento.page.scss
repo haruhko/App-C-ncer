@@ -1,3 +1,41 @@
-*{
+ion-content{
     font-family: Ancizar;
+    background-color:#EBEBEB;
+} 
+.input{
+    
+    border-radius: 20px;
+    margin-bottom: 5%;
+    
+    margin-top: 1%;
+    background-color:rgb(177, 178, 176) ;
+    border: none;
+    outline: none;
+    font-family: Ancizar;
+  }
+  
+  .item{
+    background-color:#EBEBEB;
+    font-family: Ancizar;
+  }
+
+  ion-list{
+    background-color:#EBEBEB;
+  }
+
+  .contenedor h2{
+    font-family: Ancizar_italic;
+    font-size: x-large;
+    margin-right: 0px;
+    margin: auto;
+    padding-right: 0px;
+    border-right: 0px;
+}
+
+.contenedor img{
+    
+    margin: auto;
+    margin-left: 0px;
+    padding-left: 0px;
+    border-left: 0px;
 }

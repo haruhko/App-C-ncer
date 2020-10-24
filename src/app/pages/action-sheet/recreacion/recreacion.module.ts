@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { RecreacionPageRoutingModule } from './recreacion-routing.module';
 
 import { RecreacionPage } from './recreacion.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RecreacionPageRoutingModule
+    RecreacionPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [RecreacionPage]
 })

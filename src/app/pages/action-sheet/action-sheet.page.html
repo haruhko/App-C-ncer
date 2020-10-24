@@ -1,6 +1,6 @@
 
 <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="medium">
         
         <ion-buttons
         slot="start">
@@ -8,34 +8,72 @@
             (click)="toggleMenu()">
                 <ion-icon
                 slot="icon-only"
-                name="menu"></ion-icon>
+                name="menu"
+                color="light"></ion-icon>
             </ion-button>
         </ion-buttons>
-        <ion-title class="ion-text-center">Perfil</ion-title>
+
+        <div class="text-center contenedor">
+            <h2 class="d-inline">Cáncer App</h2>
+            <img src="assets/img/miniicon.png" width="80px" />
+        </div>
+        
         <ion-buttons slot="end">
-            <ion-button >
-                <ion-icon name="settings-outline" slot="icon-only"></ion-icon>
+            <ion-button (click)="presentPopover( $event )" mode="md">
+                <ion-icon 
+                name="settings-outline" 
+                slot="icon-only"
+                color="light"
+                ></ion-icon> 
             </ion-button>
           </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <div>
-        <ion-item>
-            <ion-avatar>
-                <img src="assets/img/avatar1.svg" width="150px" />
-            </ion-avatar>
-            <h6>NOMBRE DE USUARIO</h6>
-        </ion-item>   
-    </div>    
+<ion-content color="secondary">
     <h2
-    class="ion-text-center">APP CÁNCER</h2>
-<p>Hola. Nuestra aplicación te ayudara a conocer más de tu experiencia
-    y dar un mejor manejo a tu enfermedad.
-</p>
-<p>USERNAME:andres@test.com PASSWORD:123456</p>
+    class="ion-text-center content">Perfil</h2>
 
-<ion-button   (click)="Onlogout()">salir</ion-button>
+    
+        <ion-item color="secondary">
+          <ion-avatar slot="start">
+            <img src="https://picsum.photos/200/300?random=1">
+          </ion-avatar>
+          <ion-title>Nombre de Usuario</ion-title>
+        </ion-item>
+      
+        
+<ion-card>
+    <ion-card-content>
+        <p class="ion-text-justify">Nuestra aplicación te ayudará a conocer más de tu experiencia y dar un mejor manejo a tu enfermedad.</p>
+    </ion-card-content>
+</ion-card>
+<ion-card>
+    <ion-card-subtitle class="ion-text-center">Resumen</ion-card-subtitle>
+    <ion-card-content>
+        <img src="assets/img/chart.png"  />
+        <p class="ion-text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, ea alias. 
+            Voluptates itaque veniam officiis modi a eligendi totam quisquam, 
+            alias reiciendis maiores necessitatibus cum suscipit, cumque nemo voluptate porro.</p>
+    </ion-card-content>
+</ion-card>
+         
+        
+      
+       
+         
+            
+           
+        
+     
+    <br>
+    
+     
+    
+
+<!--<ion-button   (click)="Onlogout()"
+expand="full">salir</ion-button>-->
     
 </ion-content>
+
+<app-footer></app-footer>

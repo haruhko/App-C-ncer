@@ -1,0 +1,41 @@
+<ion-list>
+  <ion-item>
+    <ion-label position="floating">{{sintomasfis.select}}</ion-label>
+    <ion-select placeholder="seleccione" class="input" ok-text="Aceptar" cancel-text="Cancelar">
+      <ion-select-option>Nada</ion-select-option>
+      <ion-select-option>Leve</ion-select-option>
+      <ion-select-option>Moderado</ion-select-option>
+      <ion-select-option>Severo</ion-select-option>
+      <ion-select-option>Intolerable</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item 
+  class="item"
+  color="secondary">
+   <ion-label position="floating">
+     {{sintomasfis.obs}}
+   </ion-label>
+   <ion-textarea 
+   placeholder="" 
+   class="input"
+   ></ion-textarea>
+   </ion-item>
+ 
+
+  
+    <ion-button fill="outline" class="btn1 mx-auto d-block" expand="small" >
+      {{sintomasfis.button}}
+     </ion-button>
+     <br>
+     <div>
+      <img src="https://picsum.photos/200/300?random=1" class="mx-auto d-block">
+     </div>
+     <ion-button fill="clear" expand="block" color="success" (click)="save()">
+      {{sintomasfis.save}}
+    </ion-button>
+</ion-list>
+
+
+
+

@@ -1,17 +1,4 @@
-<ion-header>
-  <ion-toolbar>
-      <ion-buttons
-      slot="start">
-          <ion-button
-          (click)="toggleMenu()">
-              <ion-icon
-              slot="icon-only"
-              name="menu"></ion-icon>
-          </ion-button>
-      </ion-buttons>
-      <ion-title class="ion-text-center">Auto evaluación</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 <ion-content>
 <h2
 class="ion-text-center">Autoevaluación</h2>
@@ -81,30 +68,29 @@ ver como se le agregan los numeros al range-->
   </ion-range>
 </ion-item>
 <p>(0 a 10( 0 es nada 10 es alto))</p>
-
+<ion-grid>
+  <ion-row>
+    <ion-col
+    class="ion-align-self-start">
+      <div>
+          <ion-button 
+          color="success">
+            Guardar
+          </ion-button> 
+      </div>
+    </ion-col>
+    <ion-col
+    class="ion-align-self-end">
+      <div>
+          <ion-button 
+          color="success">
+            Regresar
+          </ion-button> 
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>
 
-<ion-footer>
-    <ion-grid>
-        <ion-row>
-          <ion-col
-          class="ion-align-self-start">
-            <div>
-                <ion-button 
-                color="success">
-                  Guardar
-                </ion-button> 
-            </div>
-          </ion-col>
-          <ion-col
-          class="ion-align-self-end">
-            <div>
-                <ion-button 
-                color="success">
-                  Regresar
-                </ion-button> 
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-</ion-footer>
+
+<app-footer></app-footer>

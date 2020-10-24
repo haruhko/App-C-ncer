@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { MenuController, ModalController } from '@ionic/angular';
+import {MiplanModalPage} from '../../miplan-modal/miplan-modal.page';
 
 @Component({
   selector: 'app-mi-plan',
@@ -8,7 +9,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class MiPlanPage implements OnInit {
 
-  constructor(private menuCtrl: MenuController) { }
+  constructor(private menuCtrl: MenuController, private modalCtrl: ModalController) { }
 
   ngOnInit() {
   }
@@ -17,6 +18,14 @@ export class MiPlanPage implements OnInit {
   }
   toggleMenu(){
     this.menuCtrl.toggle();
+  }
+  async openModal() { 
+    const modal = this.modalCtrl.create({
+      component: MiplanModalPage,
+      cssClass: 'miplan-modal',
+      backdropDismiss: false
+    });
+    await (await modal).present();
   }
 
 }

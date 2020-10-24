@@ -1,54 +1,51 @@
-<ion-header>
-  <ion-toolbar>
-      <ion-buttons
-      slot="start">
-          <ion-button
-          (click)="toggleMenu()">
-              <ion-icon
-              slot="icon-only"
-              name="menu"></ion-icon>
-          </ion-button>
-      </ion-buttons>
-      <ion-title class="ion-text-center">Efectos secundarios</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
-<ion-content>
-    <h2
-    class="ion-text-center">
-Efectos secundarios del tratamiento</h2>
+<ion-content color="secondary">
+    <h2 class="ion-text-center">Efectos secundarios del tratamiento</h2>
+
+    <ion-list *ngFor= "let item of efectossecundarios; let i=index;" class="accordion-list" lines="none"
+    detail="false">
+  
+    <ion-item tappable (click)="toggleSection(i)"
+    [ngClass]="{'section-active': item.open, 'section': !item.open}">
+    <ion-icon slot="end" name="chevron-forward" *ngIf="!item.open"></ion-icon>
+    <ion-icon slot="end" name="chevron-down" *ngIf="item.open"></ion-icon>
+      <ion-label>{{item.name}}</ion-label>
+    </ion-item>
+  <!--SUBDIVISION-->
+    <div *ngIf="item.children && item.open">
+      <ion-list *ngFor="let child of item.children; let j = index;"
+      lines="none" class="child-list">
+  
+      <ion-item tappable (click)="toggleItem(i, j)" 
+      *ngIf="child.children"
+      [ngClass]="{'child-active': child.open, 'child': !child.open}">
+      <ion-icon slot="start" name="add" *ngIf="!child.open"></ion-icon>
+      <ion-icon slot="start" name="close" *ngIf="child.open"></ion-icon>
+        <ion-label>{{child.name}}</ion-label>
+      </ion-item>
+      
+   <app-efectos [efectos]="child" *ngIf="!child.children"></app-efectos>
+   <!--<ion-list *ngIf="child.children && child.open" class="product-list" lines="none" color="danger">
+     <app-sintomasfis [sintomasfis]="sintomasfis" *ngFor="let sintomasfis of child.children"></app-sintomasfis>
+    </ion-list>-->
     <div>
-        <h6>
-            Caida del cabello:
-        </h6>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, 
-            repellat vitae. Eveniet delectus sit tempora autem deleniti ullam suscipit error, 
-            qui sunt corporis perspiciatis non aperiam mollitia unde atque aliquam?
-        </p>
+      <ion-list *ngIf="child.children && child.open" class="product-list" lines="none">
+       
+       <p>{{child.info}}</p>
+      </ion-list>
     </div>
-    <div>
-        <h6>
-            Sequedad en la boca:
-        </h6>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, 
-            repellat vitae. Eveniet delectus sit tempora autem deleniti ullam suscipit error, 
-            qui sunt corporis perspiciatis non aperiam mollitia unde atque aliquam?
-        </p>
+   
+      </ion-list>
     </div>
-    <div>
-        <h6>
-            Alteraciones en la concentración y la memoria:
-        </h6>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, 
-            repellat vitae. Eveniet delectus sit tempora autem deleniti ullam suscipit error, 
-            qui sunt corporis perspiciatis non aperiam mollitia unde atque aliquam?
-        </p>
-    </div>
+
+    
+
+   
+      
+    </ion-list>
 </ion-content>
-<ion-footer>
-    <ion-button
-    expand="full">Regresar</ion-button>
-</ion-footer>
+    
+
+
+<app-footer></app-footer>

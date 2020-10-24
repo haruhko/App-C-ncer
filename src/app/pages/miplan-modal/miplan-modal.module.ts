@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Estadisticas1PageRoutingModule } from './estadisticas1-routing.module';
+import { MiplanModalPageRoutingModule } from './miplan-modal-routing.module';
 
-import { Estadisticas1Page } from './estadisticas1.page';
+import { MiplanModalPage } from './miplan-modal.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Estadisticas1PageRoutingModule
+    MiplanModalPageRoutingModule
   ],
-  declarations: [Estadisticas1Page]
+  declarations: [MiplanModalPage]
 })
-export class Estadisticas1PageModule {}
+export class MiplanModalPageModule {}

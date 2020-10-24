@@ -1,0 +1,80 @@
+{
+    "items": [
+        {
+            "name": "Quimioterapia",
+            "children": [
+                {   
+                    
+                    "info1":"Este tratamiento es el más común. Consiste  en  la  administración  de  medicamentos que atacan las células malignas del cuerpo.",
+                    "info2":"",
+                    "info3":"",
+                    "info4":""
+                }
+            ]
+        },
+        {
+            "name": "Terapia Biológica (Inmunoterapia)",
+            "children": [
+                {   
+                    
+                    "info1":"Es el tratamiento que  se  realiza  para  estimular  o  inhibir  el  sistema inmune  para  ayudar  al  cuerpo  a  atacar  el  cáncer, siendo   de   manera   natural,   en   ocasiones   este tratamiento disminuye algunos efectossecundarios.",
+                    "info2":"",
+                    "info3":"",
+                    "info4":""
+                }
+            ]
+        },
+        {
+            "name": "Terapia Hormonal",
+            "children": [
+                {   
+                    
+                    "info1":"Este tratamiento está indicado a ciertos tipos de cáncer donde bloquean o inhiben  la actividad hormonal en su crecimiento.",
+                    "info2":"",
+                    "info3":"",
+                    "info4":""
+                }
+            ]
+        },
+        {
+            "name": "Cirugía",
+            "children": [
+                {   
+                    
+                    "info1":"Es  el  procedimiento  quirúrgico  que  se realiza para retirar el tumor canceroso, en ocasiones se retira tejido circundante y ganglios linfáticos.",
+                    "info2":"",
+                    "info3":"",
+                    "info4":""
+                }
+            ]
+        },
+        {
+            "name": "Radioterapia",
+            "children": [
+                {   
+                    
+                    "info1":"Este tratamiento se realiza para algunos tipos de cáncer. Se puede aplicar externamente mediante la exposición de rayos que destruyen las células cancerosas o se puede aplicar de forma interna (braquiterapia) por medio de la administración de sustancias radiactivas que también destruyen las células malignas.",
+                    "info2":"",
+                    "info3":"",
+                    "info4":""
+                }
+            ]
+        },
+        {
+            "name": "Trasplante de Médula Ósea (Células madre)",
+            "children": [
+                {   
+                    
+                    "info1":"Consiste en trasplantar células madre que se encuentran en la médula ósea de un donante a la persona enferma para reemplazar su médula ósea que se encuentra enferma. Estas células madre trasplantadas van a empezar a producir células sanguíneas nuevas y saludables para sustituir a las células dañadas por la enfermedad, por el tratamiento de quimioterapia o radiación. Este tratamiento es parecido a una transfusión sanguínea.",
+                    "info2":"",
+                    "info3":"",
+                    "info4":""
+                }
+            ]
+        }
+       
+
+        
+      
+    ]
+}

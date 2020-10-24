@@ -25,17 +25,51 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+
+/*Anzicar*/
+@font-face{
+    font-family: Ancizar;
+    src : url('assets/fonts/ancizar_sans-regular-webfont.woff')
+
+   
+}
+
+/*Anzicar Bold Italic*/
+@font-face{
+    font-family: Ancizar_italic_bold;
+    src : url('assets/fonts/ancizar_sans-bold_italic-webfont.woff')
+}
+
+/*Anzicar Italic*/
+@font-face{
+    font-family: Ancizar_italic;
+    src : url('assets/fonts/ancizarsans_italic-webfont.woff')
+}
+
 .cal-modal {
     --height: 80%;
     --border-radius: 10px;
     padding: 25px;
 }
-@font-face{
+
+.azul, .azul .sc-ion-action-sheet-md{
+    color: #3b5998;
     font-family: Ancizar;
-    src : url('assets/fonts/ancizar_sans-regular-webfont.woff')
+
+} 
+
+.verde, .verde .sc-ion-action-sheet-md{
+    color: rgb(15, 157, 88);
+    font-family: Ancizar;
+
+} 
+.my-custom-class{
+    font-family: Ancizar;
 }
 
-//@font-face{
-    //font-family: Ancizar_bold;
-   // src : url('ancizarsans_bold-webfont.ttf')
-//}
+.miplan-modal{
+    --height: 50%;
+    --border-radius: 10px;
+    padding: 25px;
+}
+

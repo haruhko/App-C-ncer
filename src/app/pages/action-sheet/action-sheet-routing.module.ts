@@ -59,6 +59,14 @@ const routes: Routes = [
   {
     path: 'opciones',
     loadChildren: () => import('./opciones/opciones.module').then( m => m.OpcionesPageModule)
+  },
+  {
+    path: 'editar-perfil',
+    loadChildren: () => import('./editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
+  },
+  {
+    path: 'cambio-contra',
+    loadChildren: () => import('./cambio-contra/cambio-contra.module').then( m => m.CambioContraPageModule)
   }
 ];
 

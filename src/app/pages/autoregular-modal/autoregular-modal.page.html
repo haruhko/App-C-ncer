@@ -1,0 +1,67 @@
+<app-headerlogo></app-headerlogo>
+
+<ion-content color="secondary">
+    <h3 class="ion-text-center">Autoregular</h3>
+    <p class="ion-text-justify p1">
+        Durante este camino del tratamiento contra el cáncer, 
+        es fundamental que siempre me reconozca como una persona con fortalezas, 
+        limitaciones y potencialidades que debo explorar para afrontar de la mejor 
+        forma cada una de las situaciones que se presenten.
+    </p>
+
+    <p class="ion-text-justify p1">
+        En este proceso debo generar mi “plan de vida y automanejo”,
+         en este sentido, surgen preguntas en relación con mi condición, 
+         el tratamiento y las actividades que se deben realizar para el cuidado en la vida diaria.
+    </p>
+
+    <p class="ion-text-justify p1">
+        Mi vida continua con el tratamiento, es decir, debo continuar con mi trabajo, 
+        mis proyectos personales, mi vida social y recreativa, siguiendo las recomendaciones que me ha dado el equipo de salud.
+    </p>
+
+    <p class="ion-text-justify p1">
+        Debo fortalecer mis hábitos saludables y potenciar mi automanejo 
+        El automanejo o autocuidado es el conjunto de acciones que tienen una intención, y 
+        son conductas que realizan las personas por sí mismas.  Implica:
+    </p> 
+    <ion-list>
+        <ion-item color="secondary">
+            <p class="ion-text-justify">1. Reconocer los hábitos nocivos que tal vez tengo de manera inconsciente o pensando en que son adecuados.</p>
+        </ion-item>
+        <ion-item color="secondary">
+            <p class="ion-text-justify">2. Modificar estilos de vida, a través de conductas que disminuyan factores de riesgo para enfermedades o complicaciones derivadas del tratamiento.</p>
+        </ion-item>
+        <ion-item color="secondary">
+            <p class="ion-text-justify">3. Consulta al sistema de salud cuando presente síntomas o signos de alarma.</p>
+        </ion-item>
+        <ion-item color="secondary">
+            <p class="ion-text-justify">4. Pensar en que el equipo de salud es mi aliado, apoyo y facilitador para la toma de decisiones frente a mi salud</p>
+        </ion-item>
+    </ion-list>
+    
+    <ion-button  expand="block"  shape="round">
+        Cuadro mi plan
+    </ion-button>
+
+    <ion-grid fixed>
+        <ion-row>
+            <ion-col size="6">
+                <ion-button  (click)="openModal1()" color="primary"  class="mx-auto d-block">
+                    Hábitos
+                 </ion-button>
+            </ion-col>
+
+            <ion-col size="">
+                <ion-button  (click)="openModal2()" color="primary"  class="mx-auto d-block">
+                    Recreación
+                 </ion-button>
+            </ion-col>
+            
+        </ion-row>
+    </ion-grid>
+    <ion-button (click)="close() " expand="block"  color="success">
+       Terminar Componente
+     </ion-button>
+</ion-content>
+<app-footer></app-footer>

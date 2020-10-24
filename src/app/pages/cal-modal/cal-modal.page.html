@@ -1,43 +1,151 @@
-<ion-toolbar color="secondary">
+
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title class="ion-text-center">Medicamento</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+
+
+ <ion-slides mode="ios" pager="ios" scrollbar="ios">
+   <ion-slide>
+     <ion-card>
+
+      <ion-item 
+      class="item"
+      color="secondary">
+       <ion-label position="floating">
+         Nombre:
+       </ion-label>
+       <ion-input 
+       placeholder="" 
+       class="input"
+       ></ion-input>
+      </ion-item>
+
+      <ion-item class="item" color="secondary">
+        <ion-label position="floating"l>Medida:</ion-label>
+        <ion-select placeHolder="seleccione" class="input"  cancel-text="Cancelar"
+        ok-text="Aceptar" scrollbar="ios" mode="ios">
+            <ion-select-option>mg</ion-select-option>
+            <ion-select-option>mcg</ion-select-option>
+            <ion-select-option>ml</ion-select-option>
+            <ion-select-option>cápsulas</ion-select-option>
+            <ion-select-option>puffs</ion-select-option>
+            <ion-select-option>gotas</ion-select-option>
+            <ion-select-option>tabletas</ion-select-option>
+            <ion-select-option>otros</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item 
+    class="item"
+    color="secondary">
+     <ion-label position="floating">
+       Dosis:
+     </ion-label>
+     <ion-input 
+     placeholder="" 
+     class="input"
+     ></ion-input>
+    </ion-item>
+
+    <ion-item class="item" color="secondary">
+      <ion-label position="floating">Frecuencia:</ion-label>
+      <ion-select placeHolder="seleccione" class="input"  cancel-text="Cancelar"
+      ok-text="Aceptar" scrollbar="ios" mode="ios">
+          <ion-select-option>cada 4 horas</ion-select-option>
+          <ion-select-option>1 vez al día</ion-select-option>
+          <ion-select-option>2 veces al día</ion-select-option>
+          <ion-select-option>3 veces al día</ion-select-option>
+          <ion-select-option>4 veces al día</ion-select-option>
+      </ion-select>
+      </ion-item>
+
+     </ion-card>
   
-  <ion-title>{{ viewTitle }}</ion-title>
+    
+   </ion-slide>
+   <ion-slide>
+     <ion-card>
+
+      <ion-item class="item" color="secondary">
+          <ion-label position="floating">Fecha de iniciación:</ion-label>
+          <ion-datetime placeHolder="DD/MM/AAAA" displayFormat="DD/MM/YYYY" class="input"  cancel-text="Cancelar"
+          done-text="Aceptar"></ion-datetime>
+      </ion-item>
+      <ion-item class="item" color="secondary">
+          <ion-label position="floating">Fecha de finalización:</ion-label>
+          <ion-datetime placeHolder="DD/MM/AAAA" displayFormat="DD/MM/YYYY" class="input"  cancel-text="Cancelar"
+          done-text="Aceptar"></ion-datetime>
+      </ion-item>
+      <ion-item class="item" color="secondary">
+        <!--cambiar checkbox por toggle button-->
+        
+        <ion-label >Recordatorio automático</ion-label>
+        <ion-checkbox color="secondary" ></ion-checkbox>
+      </ion-item>
+
+      <ion-item 
+      class="item"
+      color="secondary">
+       <ion-label position="floating">
+         Instrucciones de Uso:
+       </ion-label>
+       <ion-textarea 
+       placeholder="" 
+       class="input"
+       ></ion-textarea>
+      </ion-item>
+     </ion-card>
+   </ion-slide>
+  
+   <ion-slide>
+     <ion-card color="secondary">
+       <ion-card-header>
+         <ion-card-subtitle>Foto</ion-card-subtitle> 
+       </ion-card-header>
+       <ion-card-content>
+        <button>Seleccionar archivo</button>
+        <br>
+        <p>https://www.youtube.com/watch?v=u4FWNL0PBBo&ab_channel=nicobytes</p>
+        <div>
+          <img src="https://picsum.photos/200/300?random=1" >
+        </div>
+       
+       </ion-card-content>
+     </ion-card>
+    
+    
+   </ion-slide>
+
+ </ion-slides>
+  
+   
+    
+  
+
+  
+  
+  
+      
+  
+
  
+</ion-content>
+
+<ion-footer  color="primary">
+<ion-toolbar color="secondary" class="footer">
+  <ion-buttons slot="start" >
+    <ion-button color="danger" (click)="close()" fill="clear"> Cancelar</ion-button>
+  </ion-buttons>
+  <ion-buttons slot="end">
+    <ion-button (click)="onClick()" color="success" fill="clear"> Agregar</ion-button>
+  </ion-buttons>
+  
 </ion-toolbar>
 
-<ion-content>
-  <ion-item>
-    <ion-label position="stacked">Title</ion-label>
-    <ion-input tpye="text" [(ngModel)]="event.title"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Description</ion-label>
-    <ion-input tpye="text" [(ngModel)]="event.desc"></ion-input>
-  </ion-item>
- 
-  <calendar
 
-  *ngIf="modalReady" 
-    [calendarMode]="calendar.mode"
-    [currentDate]="calendar.currentDate"
-    (onTitleChanged)="onViewTitleChanged($event)"
-    (onTimeSelected)="onTimeSelected($event)"
-    lockSwipes="true"
-  >
-  </calendar>
-
-</ion-content>
-<ion-footer>
-  <ion-toolbar >
-    <ion-buttons slot="start">
-      <ion-button (click)="close()" color="danger">
-        Cancelar
-      </ion-button>
-    </ion-buttons>
-    
-    <ion-buttons slot="end">
-      <ion-button (click)="save()" color="success">
-        Guardar
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
 </ion-footer>

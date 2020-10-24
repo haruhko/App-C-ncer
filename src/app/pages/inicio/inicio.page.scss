@@ -1,37 +1,18 @@
 
-    
-
-ion-toolbar{
-    position: relative;
-    background-color: rgb(80, 90, 92);
-    
-}
-ion-title{
-    
-    font-weight: 1000;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    font: bold;
-    font-size: 27px;
-}
-img{
-    
-    position: relative;
-    left: 38.5%;
-    top: 0;
-
-}
 .list{
-    background-color:#E6E7EB;
+    background-color:#EBEBEB;
+    font-family: Ancizar;
 }
 
 p{
     font-weight: 540;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    font-family: Ancizar;
 }
 ion-content{
-    background-color: #E6E7EB;
+    background-color: #EBEBEB;
+    font-family: Ancizar;
 }
 
 .input{
@@ -39,25 +20,51 @@ ion-content{
     border-radius: 20px;
     margin-bottom: 5%;
     margin-top: 1%;
+    font-family: Ancizar;
 }
 
 .btn-success{
     width:160px;
     box-shadow: 0 10px 30px 0 rgba(57, 71, 82, 0.12);
     border-radius: 20px;
+    font-family: Ancizar;
 }
 .btn-danger{
     width: 160px;
     box-shadow: 0 10px 30px 0 rgba(57, 71, 82, 0.12);
     border-radius: 20px;
-}
-
-.le{
-    color:rgb(80, 90, 92);
-}
-
-*{
     font-family: Ancizar;
 }
 
+.le{
+    color:rgb(87, 87, 87);
+}
 
+ion-footer{
+    background-color:#ffffff;
+    font-family: Ancizar_italic;
+    
+    
+}
+
+h1{
+    font-family: Ancizar_italic;
+    font-size: x-large;
+    margin-right: 0px;
+    margin: auto;
+    padding-right: 0px;
+    border-right: 0px;
+   
+}
+.contenedor img{
+   
+    float: right;
+    margin: auto;
+    margin-left: 0px;
+    padding-left: 0px;
+    border-left: 0px;
+}
+
+@media only screen and (min-width:320px) and (max-width:768px){
+    
+}

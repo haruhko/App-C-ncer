@@ -1,83 +1,114 @@
-<ion-header>
-  <ion-toolbar>
-      <ion-buttons
-      slot="start">
-          <ion-button
-          (click)="toggleMenu()">
-              <ion-icon
-              slot="icon-only"
-              name="menu"></ion-icon>
-          </ion-button>
-      </ion-buttons>
-      <ion-title class="ion-text-center">Autocuidado</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
+<app-header></app-header>
+<ion-content color="secondary">
     <h2
-    class="ion-text-center">Cuidarse con sentido
-    </h2>
+    class="ion-text-center">Cuidarse con sentido</h2>
+    <ion-card [ngClass]="{'section-active':collapseCard1,'section':!collapseCard1}" color="secondary">
+      <ion-item color="warning" (click)="collapseCard1 = !collapseCard1">
+        <ion-icon slot="end" name="chevron-down-outline" *ngIf="collapseCard1"></ion-icon>
+        <ion-icon slot="end" name="chevron-up-outline" *ngIf="!collapseCard1"></ion-icon>
+        <ion-label>Estado de ánimo </ion-label>
+    </ion-item>
+    <ion-card-content *ngIf="!collapseCard1">
+      
+        <ion-item color="secondary">
+          <ion-label position="floating">Estado de ánimo actual:</ion-label>
+          <ion-select placeholder="Seleccionar" ok-text="Aceptar" cancel-text="Cancelar" class="input">
+            <ion-select-option >Muy negativo</ion-select-option>
+            <ion-select-option>Negativo</ion-select-option>
+            <ion-select-option>Neutral</ion-select-option>
+            <ion-select-option>Positivo</ion-select-option>
+            <ion-select-option>Muy positivo</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+        <ion-button (click)="onClick()" expand="block" fill="clear" color="success">
+          Guardar
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+<ion-card [ngClass]="{'section-active':collapseCard,'section':!collapseCard}" color="secondary">
+  <ion-item color="warning" (click)="collapseCard = !collapseCard">
+    <ion-icon slot="end" name="chevron-down-outline" *ngIf="!collapseCard"></ion-icon>
+    <ion-icon slot="end" name="chevron-up-outline" *ngIf="collapseCard"></ion-icon>
+    <ion-label>Autoevaluación</ion-label>
+</ion-item>
+<ion-card-content *ngIf="collapseCard" >
+  <ion-card-title>Mi nivel de conocimiento frente al cáncer es: {{rangeVal}}</ion-card-title>
+
+   
+    <ion-range 
+    min="0" 
+    max="10" 
+    step="1" 
+    snaps="true" 
+    color="dark"
+    pin="true"
+    [(ngModel)]="rangeVal">
+    <ion-button expand="small" fill="clear" slot="start" color="dark" size="small">
+      0
+    </ion-button>
+    <ion-button expand="small" fill="clear" slot="end" color="dark" size="small">
+      10
+    </ion-button>
+    </ion-range>
+      <h5>0 es nada 10 es alto</h5>
+    <br>  
+    
+    <!--SEGUNDA OPCION
+    ver como se le agregan los numeros al range-->
+    
+    <ion-card-title>Mi nivel de conocimiento frente al tratamiento para el cáncer es: {{rangeVal2}}</ion-card-title>
+
+   
+    <ion-range 
+    min="0" 
+    max="10" 
+    step="1" 
+    snaps="true" 
+    color="dark"
+    pin="true"
+    [(ngModel)]="rangeVal2">
+    <ion-button expand="small" fill="clear" slot="start" color="dark" size="small">
+      0
+    </ion-button>
+    <ion-button expand="small" fill="clear" slot="end" color="dark" size="small">
+      10
+    </ion-button>
+    </ion-range>
+      <h5>0 es nada 10 es alto</h5>
+
+    <ion-button (click)="onClick()" expand="block" fill="clear" color="success">
+      Guardar
+    </ion-button>
+  </ion-card-content>
+</ion-card>
+    
     <!--TERMINAR PARA QUE SEAN BOTONES FUNCIONALES
     AGREGAR UN ALERT AL TERMINAR CADA COMPONENTE-->
-    <ion-list>
-          <ion-item>
-            <ion-avatar
-            slot="start">
-                <img src="assets/img/logo.png"/>
-            </ion-avatar>
-            <ion-label>1.Aprender</ion-label>
-            <ion-icon
-            slot="end"
-            name="chevron-forward-outline"></ion-icon>
-          </ion-item>
-          <ion-item>
-            <ion-avatar
-            slot="start">
-                <img src="assets/img/logo.png"/>
-            </ion-avatar>
-            <ion-label>2.Anticipar</ion-label>
-            <ion-icon
-            slot="end"
-            name="chevron-forward-outline"></ion-icon>
-          </ion-item>
-          <ion-item>
-            <ion-avatar
-            slot="start">
-                <img src="assets/img/logo.png"/>
-            </ion-avatar>
-            <ion-label>3.Autoregular</ion-label>
-            <ion-icon
-            slot="end"
-            name="chevron-forward-outline"></ion-icon>
-          </ion-item>
-          <ion-item>
-            <ion-avatar
-            slot="start">
-                <img src="assets/img/logo.png"/>
-            </ion-avatar>
-            <ion-label>4.Armonizar</ion-label>
-            <ion-icon
-            slot="end"
-            name="chevron-forward-outline"></ion-icon>
-          </ion-item>
-          <ion-item>
-            <ion-avatar
-            slot="start">
-                <img src="assets/img/logo.png"/>
-            </ion-avatar>
-            <ion-label>5.Apoyar</ion-label>
-            <ion-icon
-            slot="end"
-            name="chevron-forward-outline"></ion-icon>
-          </ion-item>
-
-          
+    <ion-list mode="md">
+      <ion-item button (click)="openModal1()" color="secondary">
+        <ion-label>Aprender</ion-label>
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+      <ion-item button (click)="openModal2()" color="secondary">
+        <ion-label>Anticipar</ion-label>
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+      <ion-item button (click)="openModal3()" color="secondary">
+        <ion-label>Autoregular</ion-label>
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+      <ion-item button (click)="openModal4()" color="secondary">
+        <ion-label>Armonizar</ion-label>
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+      <ion-item button (click)="openModal5()" color="secondary">
+        <ion-label>Apoyar</ion-label>
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-item>
     </ion-list>
-
+    
 </ion-content>
 
-<ion-footer>
-    <ion-button
-    expand="full">
-Regresar
-</ion-button>
-</ion-footer>
+<app-footer></app-footer>

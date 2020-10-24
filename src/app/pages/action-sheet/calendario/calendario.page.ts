@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MenuController, ModalController } from '@ionic/angular';
+import { MenuController, ModalController, PopoverController, ToastController } from '@ionic/angular';
 import { CalendarComponent } from 'ionic2-calendar';
 import { title } from 'process';
 import { CalModalPage } from '../../cal-modal/cal-modal.page';
+import { PopoverCalComponent } from 'src/app/components/popover-cal/popover-cal.component';
 
 @Component({
   selector: 'app-calendario',
@@ -11,22 +12,37 @@ import { CalModalPage } from '../../cal-modal/cal-modal.page';
 })
 export class CalendarioPage implements OnInit {
 
+  
+
   eventSource = [];
   viewTitle: string;
+  event = {
+    id: '',
+    title: '',
+    desc: '',
+    startTime: '',
+    endTime: '',
+    allDay: false
+  };
+
+  minDate = new Date().toISOString();
 
   calendar = {
-    mode:'month',
+    mode: 'month',
     currentDate: new Date(),
-  }
+    locale: 'es-CO',
+    formatWeekTitle: 'MMMM yyyy',
+  };
 
-  
 
   @ViewChild(CalendarComponent) myCal: CalendarComponent;
 
   constructor(private menuCtrl: MenuController,
-    private modalCtrl: ModalController) { }
+              private modalCtrl: ModalController,
+              private toastCtrl: ToastController) { }
 
   ngOnInit() {
+    this.resetEvent();
   }
   next(){
     this.myCal.slideNext();
@@ -34,111 +50,77 @@ export class CalendarioPage implements OnInit {
   back(){
     this.myCal.slidePrev();
   }
+  onEventSelected(){
+
+  }
   onViewTitleChanged(title){
     this.viewTitle = title;
   }
   toggleMenu(){
     this.menuCtrl.toggle();
   }
-  createRandomEvents(){
-    var events = [];
-    for (var i = 0; i < 50; i+= 1){
-      var date = new Date ();
-      var eventType = Math.floor(Math.random()* 2);
-      var startDay = Math.floor(Math.random()* 90) - 45;
-      var endDay = Math.floor(Math.random()* 2) + startDay;
-      var startTime;
-      var endTime;
-      if ( eventType=== 0){
-        startTime = new Date(
-          Date.UTC(
-            date.getUTCFullYear(),
-            date.getUTCMonth(),
-            date.getUTCDate() + startDay
-          )
-        );
-        if ( endDay=== startDay){
-          endDay += 1; }
-          
-          endTime = new Date(
-            Date.UTC(
-              date.getUTCFullYear(),
-              date.getUTCMonth(),
-              date.getUTCDate() + endDay
-            )
-          );
-          events.push({
-            title: 'All Day -' + i,
-            startTime: startTime,
-            endTime: endTime,
-            allDay: true,
-          });
-      } else {
-        var startMinute = Math.floor(Math.random()* 24 * 60);
-        var endMinute = Math.floor(Math.random() * 180) + startMinute;
-        startTime = new Date (
-          date.getFullYear(),
-          date.getMonth(),
-          date.getDate() + startDay,
-          0,
-          date.getMinutes() + startMinute
-        );
-        endTime = new Date (
-          date.getFullYear(),
-          date.getMonth(),
-          date.getDate() + endDay,
-          0,
-          date.getMinutes() + endMinute
-        );
-        events.push({
-          title: 'Event -' + i,
-          startTime: startTime,
-          endTime: endTime,
-          allDay: false,
-        });
-      }
+  resetEvent(){
+    this.event = {
+      id: '',
+      title: '',
+      desc: '',
+      startTime: new Date().toISOString(),
+      endTime: new Date().toISOString(),
+      allDay: false
 
+    };
+  }
+  async addEvent(){
+    let eventCopy = {
+      title: this.event.title,
+      startTime: new Date(this.event.startTime),
+      endTime: new Date(this.event.endTime),
+      allDay: this.event.allDay,
+      desc: this.event.desc
+    };
+    if (eventCopy.allDay){
+      let start = eventCopy.startTime;
+      let end = eventCopy.endTime;
+      eventCopy.startTime = new Date(Date.UTC(start.getUTCFullYear(),
+      start.getUTCMonth(),
+      start.getUTCDate()));
+      eventCopy.endTime = new Date(Date.UTC(end.getUTCFullYear(),
+      end.getUTCMonth(),
+      end.getUTCDate() + 1));
     }
-    this.eventSource = events;
+    const toast = await this.toastCtrl.create({
+      message: 'Se ha guardado un evento nuevo.',
+      duration: 1500
+    });
+    toast.present();
+    this.eventSource.push(eventCopy);
+    this.myCal.loadEvents();
+    this.resetEvent();
+
   }
 
-  removeEvents(){
+  async removeEvents(){
     this.eventSource = [];
-  }
+    
+    const toast = await this.toastCtrl.create({
+      message: 'Se han eliminado los eventos.',
+      duration: 1500
+    });
+    toast.present();
+  } 
   
-  async openCalModal() {
-    const modal = await this.modalCtrl.create({
-      component: CalModalPage,
-      cssClass: 'cal-modal',
-      backdropDismiss: false
-    });
-   
-    await modal.present();
-   
-    modal.onDidDismiss().then((result) => {
-      if (result.data && result.data.event) {
-        let event = result.data.event;
-        if (event.allDay) {
-          let start = event.startTime;
-          event.startTime = new Date(
-            Date.UTC(
-              start.getUTCFullYear(),
-              start.getUTCMonth(),
-              start.getUTCDate()
-            )
-          );
-          event.endTime = new Date(
-            Date.UTC(
-              start.getUTCFullYear(),
-              start.getUTCMonth(),
-              start.getUTCDate() + 1
-            )
-          );
-        }
-        this.eventSource.push(result.data.event);
-        this.myCal.loadEvents();
-      }
-    });
-  }
+
+//POPOVER DEL CALENDARIO PROVISIONAL USAR EN OTRA COSA
+  //async presentPopover (ev: any) {
+    //const popover = await this.popoverCtrl.create({
+      //component: PopoverCalComponent,
+      //cssClass: 'my-custom-class',
+      //event: ev,
+      //translucent: true
+    //});
+    //return await popover.present();
+  //}
+  
+  
 
 }

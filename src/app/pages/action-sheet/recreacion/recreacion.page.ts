@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { MenuController, ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-recreacion',
@@ -8,12 +8,15 @@ import { MenuController } from '@ionic/angular';
 })
 export class RecreacionPage implements OnInit {
 
-  constructor(private menuCtrl: MenuController) { }
+  constructor(private menuCtrl: MenuController, private modalCtrl: ModalController) { }
 
   ngOnInit() {
   }
   toggleMenu(){
     this.menuCtrl.toggle();
+  }
+  close(){
+    this.modalCtrl.dismiss();
   }
 
 }

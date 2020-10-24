@@ -8,7 +8,7 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-list>
+      <ion-list class="list">
         <ion-menu-toggle *ngFor="let c of componentes | async">
           <ion-item
           [routerLink]="c.redirectTo">
@@ -19,17 +19,6 @@
                 {{c.name}}
               </ion-label>
           </ion-item>
-        </ion-menu-toggle>
-        <ion-menu-toggle>
-          <ion-item 
-          (click)="Onlogout()">
-            <ion-icon
-            icon="power-outline"
-            slot="start"></ion-icon>
-            <ion-label>
-              Cerrar sesión
-            </ion-label>
-        </ion-item>
         </ion-menu-toggle>
       </ion-list>
     </ion-content>

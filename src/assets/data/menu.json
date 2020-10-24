@@ -4,13 +4,19 @@
         "name": "Perfil",
         "redirectTo": "/action-sheet"
 },
+
 {
     "icon": "newspaper-outline",
     "name": "Mi plan",
     "redirectTo": "/action-sheet/mi-plan"
 },
 {
-    "icon": "fitness-outline",
+    "icon": "bandage-outline",
+    "name": "Tratamiento",
+    "redirectTo": "/action-sheet/tratamiento"
+},
+{
+    "icon": "body-outline",
     "name": "Síntomas físicos",
     "redirectTo": "/action-sheet/sintomas-fisicos"
 },
@@ -20,55 +26,32 @@
 "redirectTo": "/action-sheet/sintomas-sicologicos"
 },
 {
-    "icon": "body-outline",
-    "name": "Autoevaluación",
-    "redirectTo": "/action-sheet/auto-evalucion"
-},
-{
-"icon": "pulse-outline",
-"name": "Autocuidado",
-"redirectTo": "/action-sheet/autocuidado"
-},
-{
-    "icon": "happy-outline",
-    "name": "Estado de ánimo",
-    "redirectTo": "/action-sheet/estado-de-animo"
-},
-{
-"icon": "heart-circle-outline",
-"name": "Hábitos",
-"redirectTo": "/action-sheet/habitos"
-},
-{
     "icon": "flask-outline",
     "name": "Efectos secundarios",
     "redirectTo": "/action-sheet/efectos-secundarios"
 },
 {
-"icon": "bandage-outline",
-"name": "Tratamiento",
-"redirectTo": "/action-sheet/tratamiento"
+"icon": "fitness-outline",
+"name": "Autocuidado",
+"redirectTo": "/action-sheet/autocuidado"
 },
+
 {
     "icon": "calendar-outline",
     "name": "Calendario",
     "redirectTo": "/action-sheet/calendario"
 },
 {
-"icon": "ice-cream-outline",
-"name": "Recreación",
-"redirectTo": "/action-sheet/recreacion"
+    "icon": "stats-chart-outline",
+    "name": "Estadisticas",
+    "redirectTo": "/estadisticas1"
 },
 {
-    "icon": "warning-outline",
-    "name": "Signos de alarma",
-    "redirectTo": "/action-sheet/signos-de-alarma"
-},
-{
-"icon": "settings-outline",
-"name": "Opciones",
-"redirectTo": "/action-sheet/opciones"
+    "icon": "analytics-outline",
+    "name": "Tendencias",
+    "redirectTo": "/estadisticas2"
 }
+
 
 ]
 

@@ -1,0 +1,56 @@
+<app-headerlogo></app-headerlogo>
+<ion-content color="secondary">
+    <h3 class="ion-text-center">Anticipar</h3>
+    <p class="ion-text-justify p1">Los signos de alarma son señales de que algo no anda bien y de que se requiere atención médica, 
+        es decir, son razones por las cuales se debe acudir al servicio de urgencias o de consulta prioritaria. </p>
+    <ion-title class="ion-text-center">Signos de Alarma</ion-title>
+    
+    <ion-list >
+        <ion-item color="secondary">
+            <p>Temperatura igual o mayor a 38ºC</p>
+        </ion-item>
+
+        <ion-item color="secondary">
+            <p>Lesiones en la boca que le impidan comer (Mucositis severa).</p>
+        </ion-item>
+
+        <ion-item color="secondary">
+            <p>Vómito (más de 4 o 5 veces en un día)</p>
+        </ion-item>
+
+        <ion-item color="secondary">
+            <p>Diarrea (más de 5 deposiciones en un día)</p>
+        </ion-item>
+
+        <ion-item color="secondary">
+            <p>Presencia de reacción alérgica (prurito, enrojecimiento, ronchas).</p>
+        </ion-item>
+
+        <ion-item color="secondary">
+            <p>Cambios en la orina (Olor, Color, o presencia de sangrado)</p>
+        </ion-item>
+
+        <ion-item color="secondary">
+            <p>Sangrados anormales, incluyendo la presencia de moretones y pequeños puntos rojos que aparecen por todo el cuerpo (petequias) </p>
+        </ion-item>
+    </ion-list>
+    <ion-grid fixed>
+        <ion-row>
+            <ion-col size="2">
+            </ion-col>
+
+            <ion-col size="8">
+                <ion-button  (click)="openModal()" color="primary"  class="mx-auto d-block">
+                    Signos de Alarma (juego)
+                 </ion-button>
+            </ion-col>
+            
+        </ion-row>
+    </ion-grid>
+        
+       
+         <ion-button (click)="close() " expand="block"  color="success">
+        Terminar Componente
+     </ion-button>
+</ion-content>
+<app-footer></app-footer>

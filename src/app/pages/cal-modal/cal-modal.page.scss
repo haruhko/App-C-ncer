@@ -1,14 +1,57 @@
 
-:host ::ng-deep {
-    .monthview-container {
-        height: auto !important;
-    }
- 
-    .event-detail-container {
-        display: none;
-    }
+
+
+ion-content{
+    font-family: Ancizar;
 }
 
-*{
+img{
+    height: 200px;
+    width: 200px;
+}
+
+ion-title{
     font-family: Ancizar;
+}
+
+.footer{
+    font-family: Ancizar;
+}
+
+
+ion-slide {
+    display: block;
+    background-color: #EBEBEB;
+}
+
+ion-slides{
+    --bullet-background: grey;
+    --bullet-background-active:#8890B2;
+}
+
+.input{
+    
+    border-radius: 20px;
+    margin-bottom: 5%;
+    
+    margin-top: 1%;
+    background-color:rgb(177, 178, 176) ;
+    border: none;
+    outline: none;
+}
+
+.item{
+    background-color:#ffff;
+    
+}
+
+.list{
+    background-color:#ffff;
+}
+ion-label, ion-checkbox, ion-input, ion-textarea{
+    font-family: Ancizar;
+}
+
+button{
+    background-color: green;
 }

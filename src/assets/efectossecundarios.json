@@ -1,0 +1,189 @@
+{
+    "items": [
+        {
+            "name": "Caída del cabello",
+            "children": [
+                {   
+                    
+                    "info1":"El tratamiento contra el cáncer puede generar caída del cabello, esto se puede producir en especial por los tratamientos de quimioterapia, es importante saber que NO TODAS LAS QUIMIOTERAPIAS producen pérdida del cabello.",
+                    "info2": "Se ocasiona por que la quimioterapia ataca a las células que se reproducen muy rápido, los medicamentos viajan por todo el cuerpo, lo que implica que también vayan hacia el cuero cabelludo, donde las células que ayudan a que crezca el cabello se vean afectadas por el medicamento.",
+                    "info3": "En ocasiones la radioterapia puede provocar pérdida del cabello, pero sólo si se recibe en la cabeza y en un área donde haya crecimiento del mismo.",
+                    "info4": ""
+                }
+            ]
+        },
+        {
+            "name": "Sequedad en la boca",
+            "children": [
+                {   
+                    
+                    "info1":"La sequedad en la boca puede producirse tanto por la quimioterapia como por la radioterapia, porque pueden afectar las células de la boca, y las glándulas salivales (encargadas de producir saliva). En ocasiones la producción de saliva se altera, y esta puede volverse más espesa, o ser producida en menor cantidad.",
+                    "info2": "",
+                    "info3": "",
+                    "info4": ""
+                }
+            ]
+        },
+        {
+            "name": "Alteraciones en la concentración y la memoria",
+            "children": [
+                {   
+                    
+                    "info1":"En algunas ocaciones se altera la capacidad para concentrarse y para recordar cosas.",
+                    "info2": "Estos efectos también pueden relacionarse con el estado emocional de las personas, por ejemplo: cuando una persona se encuentra alterada por recibir un diagnóstico, puede experimentar angustia y tristeza, lo que puede hacer que no se concentre con facilidad.",
+                    "info3": "",
+                    "info4": ""
+                }
+            ]
+        },
+        {
+            "name": "Heridas en la boca y daños en los dientes",
+            "children": [
+                {   
+                    
+                    "info1":"Con algunos tratamientos principalmente la quimioterapia y radioterapia se pueden producir heridas y cambios en los dientes",
+                    "info2": "La boca puede irritarse y ponerse mucho mas sensible, pueden aparecer placas que generan molestias para comer.",
+                    "info3": "",
+                    "info4": ""
+                }
+            ]
+        },
+        {
+            "name": "Cansancio",
+            "children": [
+                {   
+                    
+                    "info1":"El cansancio puede aparecer durante el transcurso de la enfermedad por diferentes motivos. El cáncer es una enfermedad que produce inflamación, por lo tanto el cuerpo produce unas sustancias químicas que promueven dicha inflamación, estas sustancias pueden incrementar la sensación de cansancio.",
+                    "info2": "Cuando los tratamientos (en especial, con la quimioterapia), puede ocurrir que se presente anemia, en la anemia se alteran los glóbulos rojos, que se encargan de llevar el oxígeno por el cuerpo, cuando no funcionan bien la persona afectada puede sentirse muy cansada. ",
+                    "info3": "El cansancion provocado por el cáncer también puede estar relacionado con la preocupación y las emociones de tristeza, recordemos que el cansancio no sólo es físico, también puede ser emocional.",
+                    "info4": ""
+                }
+            ]
+        },
+        {
+            "name": "Vómito, náuseas",
+            "children": [
+                {   
+                    
+                    "info1":"Este es uno de los efectos más comunes, y puede estar relacionado con la localización de la enfermedad, con los medicamentos para el dolor (los opioides), con la quimioterapia y con la radioterapia (cuando se recibe radioterapia en el abdomen).",
+                    "info2": "",
+                    "info3": "",
+                    "info4": ""
+                }
+            ]
+        },
+        {
+            "name": "Diarrea y estreñimiento",
+            "children": [
+                {   
+                    
+                    "info1":"Estos efectos se producen debido a múltiples factores, pueden ser provocados por la quimioterapia, la radioterapia (cuando se irradia el abdomen), los medicamentos usados para el dolor (opioides), los periodos de inmovilidad prolongados, la deshidratación, y la dieta (que puede verse afectada por las intervenciones quirúrgicas).",
+                    "info2": "",
+                    "info3": "",
+                    "info4": ""
+                }
+            ]
+        },
+        {
+            "name": "Sudoración excesiva",
+            "children": [
+                {   
+                    
+                    "info1":"La sudoración excesiva puede aparecer por varias razones, en los pacientes con cáncer ocasionalmente se presentan sudores nocturnos, debido a los cambios en el metabolismo que produce el cáncer.",
+                    "info2": "Además de ello, cuando se realizan cirugías en las que se retiran glándulas (como los ovarios), o se realizan tratamientos hormonales, las personas pueden experimentar aumento en la sudoración y calor.",
+                    "info3": "",
+                    "info4": ""
+                }
+            ]
+        },
+        {
+            "name": "Cambios en la piel",
+            "children": [
+                {   
+                    
+                    "info1":"La quimioterapia puede producir diversos cambios en la piel, estos cambios pueden estar asociados al tipo de tratamiento por ejemplo, la radioterapia puede provocar irritación, enrojecimiento y en el área donde se aplica.",
+                    "info2": "Algunos medicamentos usados en la quimioterapia, pueden afectar las células de la piel, provocando alteraciones en el color (manchas), o resequedad (porque alteran las glándulas sebáceas que producen la grasa que lubrica la piel).",
+                    "info3": "",
+                    "info4": ""
+                }
+            ]
+        },
+        {
+            "name": "Dolor",
+            "children": [
+                {   
+                    
+                    "info1":"El dolor es uno de los síntomas más temidos al momento del diagnóstico. En el cáncer se puede producir dolor por muchas razones.",
+                    "info2": "El dolor aparece porque hay un daño real o potencial de un tejido, puede aparecer porque hay inflamación, daño en un nervio, etcétera.",
+                    "info3": "El dolor puede aparecer debido a un procedimiento (como una cirugía), como efecto propio del cáncer (por el sitio que afecta), y debe ser evaluado y monitoreado constantemente (en ocasiones puede dar indicios de progresión de la enfermedad).",
+                    "info4": ""
+                }
+            ]
+        },
+        {
+            "name": "Problemas con el interés o la actividad sexual",
+            "children": [
+                {   
+                    
+                    "info1":"Estos pueden surgir por efectos tanto corporales como emocionales en la persona.",
+                    "info2": "Pueden ser secundarios a un procedimiento quirúrgico (porque se produce dolor), por alteraciones hormonales (debido a los tratamientos), por miedo (de la pareja a generar algún tipo de daño), o por cambios en la forma en la que la persona con cáncer se ve a sí misma (por el cambio físico que se ve como consecuencia de los tratamientos).",
+                    "info3": "",
+                    "info4": ""
+                }
+            ]
+        },
+        {
+            "name": "Alteraciones del sueño",
+            "children": [
+                {   
+                    
+                    "info1":"Es común que durante los tratamientos se presenten cambios en el patrón del sueño, que se pueden asociar a efectos del tratamiento (como el dolor, o la sensación de picazón), a efectos secundarios de los medicamentos (con algunos agentes de quimioterapia, y medicamentos para tratar la depresión se produce insomnio). E incluso al estado anímico de la persona, pues debido a la angustia, a la tristeza o a la preocupación excesivas se altera la capacidad de conciliar o mantener el sueño.",
+                    "info2": "",
+                    "info3": "",
+                    "info4": ""
+                }
+            ]
+        },
+        {
+            "name": "Bajas en las defensas",
+            "children": [
+                {   
+                    
+                    "info1":"Estas alteraciones pueden ser propias del tipo de cáncer (como sucede con los pacientes que tienen leucemia), o como consecuencia del tratamiento.",
+                    "info2": "En algunas ocasiones, la baja en las defensas es un efecto que se puede desencadenar por el uso de algunos medicamentos como los antiinflamatorios (glucocorticoides), y algunos agentes de quimioterapia",
+                    "info3": "Existen células sanguíneas que se encargan de proteger al cuerpo ante las infecciones, cuando  no hay un número adecuado de estas células de defensas en el organismo , las personas son más propensas a adquirir enfermedades infecciosas, e incluso complicaciones graves derivadas de estas infecciones.",
+                    "info4": "Durante el tratamiento, el personal de salud va a estar controlando periódicamente estas células mediante pruebas de sangre (cuadro hemático)."
+                }
+            ]
+        },
+        {
+            "name": "Cambio en el sabor de los alimentos",
+            "children": [
+                {   
+                    
+                    "info1":"Es una de las alteraciones más frecuentes en pacientes con cáncer y suele aparecer al inicio del tratamiento con quimioterapia; La causa de este síntoma es por la administración de distintos medicamentos los cuales afectan a las células bucales y a los receptores del gusto.",
+                    "info2": "Este síntoma puede durar semanas o incluso meses después del tratamiento. En ocasiones hay ausencia o disminución de la sensación de uno o varios sabores básicos como dulce, salado, amargo o ácido; o puede haber confusión en la percepción de alguno de ellos.",
+                    "info3": "Las consecuencias de esta afección son también responsables de que el paciente esté con menor apetito, no disfrute al comer y haya pérdida de peso, lo que contribuye a un deterioro importante de la calidad de vida de la persona.",
+                    "info4": ""
+                }
+            ]
+        },
+        {
+            "name": "Tristeza y preocupación",
+            "children": [
+                {   
+                    
+                    "info1":"Es muy común el afligirse debido a los cambios que implica el cáncer en la vida de una persona. En varias ocasiones la mayor preocupación que tienen los pacientes está relacionada con el tratamiento que se  va  a  recibir,  se preocupan también por el cuidado de personas a cargo o por información errónea o inadecuada frente al tratamiento oncológico.  Se debe tener  en  cuenta  que  el  período  transcurrido  entre  el  diagnóstico  y  el  inicio  de la  quimioterapia  es  uno  de  los  momentos más  difíciles  del  proceso  de  enfermedad, y en el que las pacientes pueden necesitar más atención especializada.",
+                    "info2": " Si una persona ha estado triste durante bastante tiempo o tiene problemas para sobrellevar las actividades cotidianas donde se encuentre con varias preocupaciones, puede que tenga depresión clínica. La depresión clínica causa gran angustia, ineficiencia en el desempeño e incluso puede hacer que la persona con cáncer tenga una menor capacidad de seguir un plan de tratamiento.",
+                    "info3": "La buena noticia es que estas emociones se pueden manejar con ayuda profesional y familiar, por lo tanto es necesario que en una valoración psicooncológica se aborden estos aspectos con el paciente con el fin de dar una pauta de acción a aplicar  y así disminuir el sufrimiento y tener una mejor la calidad de vida.",
+                    "info4": ""
+                }
+            ]
+        }
+
+
+
+        
+      
+    ]
+}

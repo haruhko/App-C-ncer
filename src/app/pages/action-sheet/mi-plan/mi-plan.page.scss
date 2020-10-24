@@ -1,3 +1,23 @@
-*{
+ion-content{
     font-family: Ancizar;
+}
+
+.contenedor h2{
+    font-family: Ancizar_italic;
+    font-size: x-large;
+    margin-right: 0px;
+    margin: auto;
+    padding-right: 0px;
+    border-right: 0px;
+}
+
+.contenedor img{
+    
+    margin: auto;
+    margin-left: 0px;
+    padding-left: 0px;
+    border-left: 0px;
+}
+ion-list{
+    background-color:#EBEBEB;
 }

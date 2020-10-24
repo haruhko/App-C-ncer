@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title class="ion-text-center">Agregar Plan</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+
+  <ion-item class="item" color="secondary">
+    <ion-label position="floating">Hábito:</ion-label>
+    <ion-input type="text" placeholder="" class="input"></ion-input>
+  </ion-item>
+  
+
+  <ion-item 
+  class="item"
+  color="secondary">
+   <ion-label position="floating">
+     Estrategia:
+   </ion-label>
+   <ion-textarea 
+   placeholder="" 
+   class="input"
+   ></ion-textarea>
+   </ion-item>
+ 
+</ion-content>
+
+<ion-footer  color="primary">
+<ion-toolbar color="secondary" class="footer">
+  <ion-buttons slot="start" >
+    <ion-button color="danger" (click)="close()" fill="clear"> Cancelar</ion-button>
+  </ion-buttons>
+  <ion-buttons slot="end">
+    <ion-button (click)="onClick()" color="success" fill="clear"> Agregar</ion-button>
+  </ion-buttons>
+  
+</ion-toolbar>
+
+
+</ion-footer>

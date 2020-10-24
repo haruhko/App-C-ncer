@@ -12,16 +12,18 @@ import { CalModalPageModule } from '../../cal-modal/cal-modal.module';
 
 import {registerLocaleData} from '@angular/common';
 import localeDe from '@angular/common/locales/es';
+import { ComponentsModule } from 'src/app/components/components.module';
 registerLocaleData(localeDe);
 
-@NgModule({
+@NgModule({ 
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     CalendarioPageRoutingModule,
     NgCalendarModule,
-    CalModalPageModule
+    CalModalPageModule,
+    ComponentsModule
    
   ],
   declarations: [CalendarioPage],

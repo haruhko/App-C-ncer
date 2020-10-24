@@ -1,20 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-      <ion-buttons
-      slot="start">
-          <ion-button
-          (click)="toggleMenu()">
-              <ion-icon
-              slot="icon-only"
-              name="menu"></ion-icon>
-          </ion-button>
-      </ion-buttons>
-      <ion-title class="ion-text-center">signos de alarma</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-headerlogo></app-headerlogo>
 <ion-content>
-    <h2
-    class="ion-text-center">Juego signos de alarma</h2>
+    <h3
+    class="ion-text-center">Juego signos de alarma</h3>
     <p>relaciona los signos de alarma con su caracteristica:</p>
     <div>
         <ion-list>
@@ -44,11 +31,9 @@
             </ion-item>
         </ion-list>
     </div>
-
-</ion-content>
-<ion-footer>
     <ion-button
     expand="full">Calificar</ion-button>
     <ion-button
-    expand="full">Regresar</ion-button>
-</ion-footer>
+    expand="full" (click)="close()">Regresar</ion-button>
+</ion-content>
+<app-footer></app-footer>

@@ -1,126 +1,118 @@
-<ion-header>
-  <ion-toolbar>
-      <ion-buttons
-      slot="start">
-          <ion-button
-          (click)="toggleMenu()">
-              <ion-icon
-              slot="icon-only"
-              name="menu"></ion-icon>
-          </ion-button>
-      </ion-buttons>
-      <ion-title class="ion-text-center">habitos</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-headerlogo></app-headerlogo>
+<!--AGREGAR TOAST PARA EL BOTON DE CALIFICAR-->
+<ion-content color="secondary">
+    <h3 class="ion-text-center">Reflexión: Hábitos y conductas</h3>
+<ion-title>1.Tengo hábitos nocivos</ion-title>
 
-<ion-content>
-    <h2
-    class="ion-text-center">
-Reflexión: Hábitos y conductas</h2>
-<h6>1.Tengo hábitos nocivos:</h6>
-    <ion-list>
-        <ion-item>
-            <ion-label>Hábito 1</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Hábito 2</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Hábito 3</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-    </ion-list>
-    <h6>2.Tengo estilos de vida saludables:</h6>
-    <ion-list>
-        <ion-item>
-            <ion-label>Estilo 1</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Estilo 2</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Estilo 3</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Otro</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <!--colocar el label encima-->
-        <ion-item>
-            <ion-label>Cual:</ion-label>
-            <ion-input></ion-input>
-        </ion-item>
-    </ion-list>
-    <h6>3.Tengo conductas de automanejo frente a mi condicion
-        de salud:
-    </h6>
-    <ion-list>
-        <ion-item>
-            <ion-label>Conducta 1</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Conducta 2</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Conducta 3</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Conducta 4</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Conducta 5</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Conducta 6</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Conducta 7</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Conducta 8</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-        <ion-item>
-            <ion-label>Conducta 9</ion-label>
-            <ion-checkbox slot="start"></ion-checkbox>
-        </ion-item>
-    </ion-list>
-    
+<ion-item color="secondary">
+    <ion-label position="floating">Habitos que afectan mi situacion de salud:</ion-label>
+    <ion-select  multiple="true" placeholder="Seleccione uno o varios" ok-text="Aceptar" cancel-text="Cancelar" class="input">
+        <ion-select-option>Ninguno</ion-select-option>
+        <ion-select-option>Sedentarismo</ion-select-option>
+        <ion-select-option>Tabaquismo</ion-select-option>
+        <ion-select-option>Mala alimentación</ion-select-option>
+        <ion-select-option>Alcoholismo</ion-select-option>
+    </ion-select>
+</ion-item>   
+<ion-item color="secondary">
+    <ion-label position="floating">Otro:</ion-label>
+    <ion-input type="text" placeholder="¿Cuál?" class="input"></ion-input>
+</ion-item>
+
+<ion-title>2.Tengo estilos de vida saludables</ion-title>
+<ion-item color="secondary">
+<ion-label position="floating">Estilos de vida saludables:</ion-label>
+    <ion-select  multiple="true" placeholder="Seleccione uno o varios" ok-text="Aceptar" cancel-text="Cancelar" class="input">
+        <ion-select-option></ion-select-option>
+        <ion-select-option></ion-select-option>
+        <ion-select-option></ion-select-option>
+        <ion-select-option></ion-select-option>
+    </ion-select>
+</ion-item>   
+<ion-item color="secondary">
+    <ion-label position="floating">Otro:</ion-label>
+    <ion-input type="text" placeholder="¿Cuál?" class="input"></ion-input>
+</ion-item>
+
+<ion-title>3.Tengo conductas de automanejo frente <br>a mi condicion de salud</ion-title>
+<ion-item color="secondary">
+    <ion-label position="floating">Atiendo mis necesidades físicas y espirituales:</ion-label>
+        <ion-select  placeholder="Seleccione" ok-text="Aceptar" cancel-text="Cancelar" class="input">
+            <ion-select-option>Si</ion-select-option>
+            <ion-select-option>No</ion-select-option>
+        </ion-select>
+</ion-item>
+<ion-item color="secondary">
+    <ion-label position="floating">Busco atención médica cuando lo requiero:</ion-label>
+        <ion-select  placeholder="Seleccione" ok-text="Aceptar" cancel-text="Cancelar" class="input">
+            <ion-select-option>Si</ion-select-option>
+            <ion-select-option>No</ion-select-option>
+        </ion-select>
+</ion-item>
+<ion-item color="secondary">
+    <ion-label position="floating">Cumplo mis citas con el personal de salud:</ion-label>
+        <ion-select  placeholder="Seleccione" ok-text="Aceptar" cancel-text="Cancelar" class="input">
+            <ion-select-option>Si</ion-select-option>
+            <ion-select-option>No</ion-select-option>
+        </ion-select>
+</ion-item>
+<ion-item color="secondary">
+    <ion-label position="floating">Sigo las recomendaciones médicas:</ion-label>
+        <ion-select  placeholder="Seleccione" ok-text="Aceptar" cancel-text="Cancelar" class="input">
+            <ion-select-option>Si</ion-select-option>
+            <ion-select-option>No</ion-select-option>
+        </ion-select>
+</ion-item>
+<ion-item color="secondary">
+    <ion-label position="floating">Como alimentos sanos:</ion-label>
+        <ion-select  placeholder="Seleccione" ok-text="Aceptar" cancel-text="Cancelar" class="input">
+            <ion-select-option>Si</ion-select-option>
+            <ion-select-option>No</ion-select-option>
+        </ion-select>
+</ion-item>
+<ion-item color="secondary">
+    <ion-label position="floating">Descanso lo suficiente:</ion-label>
+        <ion-select  placeholder="Seleccione" ok-text="Aceptar" cancel-text="Cancelar" class="input">
+            <ion-select-option>Si</ion-select-option>
+            <ion-select-option>No</ion-select-option>
+        </ion-select>
+</ion-item>
+<ion-item color="secondary">
+    <ion-label position="floating">Hago ejercicio:</ion-label>
+        <ion-select  placeholder="Seleccione" ok-text="Aceptar" cancel-text="Cancelar" class="input">
+            <ion-select-option>Si</ion-select-option>
+            <ion-select-option>No</ion-select-option>
+        </ion-select>
+</ion-item>
+<ion-item color="secondary">
+    <ion-label position="floating">Me tomo el tiempo necesario para cuidarme, y relajarme:</ion-label>
+        <ion-select  placeholder="Seleccione" ok-text="Aceptar" cancel-text="Cancelar" class="input">
+            <ion-select-option>Si</ion-select-option>
+            <ion-select-option>No</ion-select-option>
+        </ion-select>
+</ion-item>
+<ion-item color="secondary">
+    <ion-label position="floating">Disfruto de algún tiempo sin tantas preocupaciones:</ion-label>
+        <ion-select  placeholder="Seleccione" ok-text="Aceptar" cancel-text="Cancelar" class="input">
+            <ion-select-option>Si</ion-select-option>
+            <ion-select-option>No</ion-select-option>
+        </ion-select>
+</ion-item>
+<ion-button expand="block"   color="success">
+    Calificar
+</ion-button>
+<ion-button (click)="close()" expand="block" >Regresar</ion-button>
+
+<p>Si la mayor parte de respuestas fueron SI, es decir de 7 a 9 puedo suponer que tengo
+     excelentes comportamientos de automanejo. Debo continuar  y fortalecer aquellos 
+     aspectos que se están viendo afectados por el tratamiento contra el cáncer</p>
+<p>Si tuve entre 4 a 6 respuestas con SI, debo decir que tengo un nivel medio de 
+    comportamientos de automanejo, sin embargo estoy en riesgo, debo revisar mis 
+    estilos de vida y armonizarlo con el tratamiento oncológico.</p>
+<p>Si tuve menos de 3 preguntas con SI, es necesario hacer una pausa/pare y reorientar
+     algunas actividades del cotidiano para invertir en mí. Mi automanejo está muy 
+     bajo y no puedo suponer que todo es derivado del tratamiento. Es necesario replantear
+      mis  prioridades.</p>
+  
 </ion-content>
-<ion-footer>
-    <ion-grid>
-        <ion-row>
-          <ion-col
-          class="ion-align-self-start">
-            <div>
-                <ion-button 
-                color="success">
-                  Calificar
-                </ion-button> 
-            </div>
-          </ion-col>
-          
-          <ion-col
-          class="ion-align-self-end">
-            <div>
-                <ion-button 
-                color="success">
-                  Regresar
-                </ion-button> 
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-</ion-footer>
+<app-footer></app-footer>

@@ -1,25 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-      <ion-buttons
-      slot="start">
-          <ion-button
-          (click)="toggleMenu()">
-              <ion-icon
-              slot="icon-only"
-              name="menu"></ion-icon>
-          </ion-button>
-      </ion-buttons>
-      <ion-title class="ion-text-center">Tratamiento</ion-title>
+  <ion-toolbar color="medium">
+    <ion-buttons
+    slot="start">
+        <ion-back-button 
+        color="light"
+        routerLink="/"
+        defaultHref="/"
+        mode="md"></ion-back-button>
+    </ion-buttons>
+<!--PARA CREAR LAS TAREAS O EVENTOS HAY QUE MANDARLOS A UNA API REST
+LUEGO RECIBIRLA Y RENDERIZARLA MIRAR COMO AGREAGAR UNA FOTO, PARA IMPRIMIR LA INFORMACION
+JSON SE HACE CON NGFOR-->
+    <div class="text-center contenedor">
+        <h2 class="d-inline">Cáncer App</h2>
+        <img src="assets/img/miniicon.png" width="80px" />
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="openModal()" slot="end">
+        <ion-icon slot="start" name="add" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons> 
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+
+<ion-content color="secondary">
     <h2
     class="ion-text-center">
     Tratamiento actual</h2>
-    <div>
+
         <ion-list>
-            <ion-item>
+            <ion-item class="item" color="secondary">
                 <ion-label>Nombre</ion-label>
                 <ion-label>Medida</ion-label>
                 <ion-label>Dosis</ion-label>
@@ -27,21 +39,21 @@
                 name="duplicate-outline"
                 (click)="Add()"></ion-icon>
             </ion-item>
-            <ion-item>
+            <ion-item class="item" color="secondary">
                 <ion-label>Mark</ion-label>
                 <ion-label>Otto</ion-label>
                 <ion-label>@mdo</ion-label>
                 <ion-icon name="create-outline"></ion-icon>
                 <ion-icon name="trash-outline"></ion-icon>
             </ion-item>
-            <ion-item>
+            <ion-item class="item" color="secondary">
                 <ion-label>Jacob</ion-label>
                 <ion-label>Thornton</ion-label>
                 <ion-label>@fat</ion-label>
                 <ion-icon name="create-outline"></ion-icon>
                 <ion-icon name="trash-outline"></ion-icon>
             </ion-item>
-            <ion-item>
+            <ion-item class="item" color="secondary">
                 <ion-label>Larry</ion-label>
                 <ion-label>the Bird</ion-label>
                 <ion-label>@twitter</ion-label>
@@ -50,88 +62,11 @@
                 name="trash-outline"></ion-icon>
             </ion-item>
         </ion-list>
-    </div>
+    <ion-button   (click)="openModal()" color="dark" expand="block" fill="clear" shape="round">
+      Click me
+    </ion-button>
     
-    <div>
-    <h6>Medicamento prescrito:</h6>
-    <div>
-        <!--COLOCAR FLOAT LABELS-->
-        <ion-list>
-            <ion-item>
-                <ion-label>Nombre:</ion-label>
-                <ion-input></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label>Medida:</ion-label>
-                <ion-select>
-                    <ion-select-option>1</ion-select-option>
-                    <ion-select-option>2</ion-select-option>
-                </ion-select>
-            </ion-item>
-            <ion-item>
-                <!--colocar un select doble-->
-                <ion-label>Dosis:</ion-label>
-                <ion-input></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label>Frecuencia:</ion-label>
-                <ion-select>
-                    <ion-select-option>1</ion-select-option>
-                    <ion-select-option>2</ion-select-option>
-                </ion-select>
-            </ion-item>
-            <ion-item>
-                <ion-label>Instrucciones de uso:</ion-label>
-                <ion-textarea
-                placeholder="border colocar"></ion-textarea>
-            </ion-item>
-            <ion-item>
-                <ion-label>Fecha de iniciación:</ion-label>
-                <ion-datetime></ion-datetime>
-            </ion-item>
-            <ion-item>
-                <ion-label>Fecha de finalización:</ion-label>
-                <ion-datetime></ion-datetime>
-            </ion-item>
-        </ion-list>
-
-        <ion-checkbox></ion-checkbox>
-        <ion-label>Recordatorio automatico</ion-label>
-        <div>
-            <h6>Foto:</h6>
-            <ion-button>Seleccionar archivo</ion-button>
-            <ion-label>no se eligio archivo</ion-label>
-            <img src="assets/img/avatar1.svg" width="150px"/>
-        </div>
-    </div>
-        
     
-    </div>
-
+   
 </ion-content>
-
-<ion-footer>
-    <ion-grid>
-        <ion-row>
-          <ion-col
-          class="ion-align-self-start">
-            <div>
-                <ion-button 
-                color="success">
-                  Agregar
-                </ion-button> 
-            </div>
-          </ion-col>
-          
-          <ion-col
-          class="ion-align-self-end">
-            <div>
-                <ion-button 
-                color="success">
-                  Cancelar
-                </ion-button> 
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-</ion-footer>
+<app-footer></app-footer>

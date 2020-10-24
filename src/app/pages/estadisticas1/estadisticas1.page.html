@@ -1,23 +1,26 @@
+
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="medium">
+      
       <ion-buttons
       slot="start">
-          <ion-button
-          (click)="toggleMenu()">
-              <ion-icon
-              slot="icon-only"
-              name="menu"></ion-icon>
-          </ion-button>
+          <ion-back-button 
+          color="light"
+          routerLink="/action-sheet"
+          defaultHref="/action-sheet"
+          mode="md"></ion-back-button>
       </ion-buttons>
-      <ion-title class="ion-text-center">Estadisticas</ion-title>
+
+      <div class="text-center contenedor">
+          <h2 class="d-inline">Cáncer App</h2>
+          <img src="assets/img/miniicon.png" width="80px" />
+      </div>
+      
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <h2
-    class="ion-text-center"
-    >Síntomas físicos experimentados</h2>
-  <h4>Estadística</h4>
+ 
+  <h4>Síntomas físicos experimentados</h4>
   <ion-card>
     <ion-card-header>
       <img src="assets/img/grafico.jpg"/>
@@ -32,7 +35,7 @@
        numquam vero repudiandae eligendi! Repudiandae?
     </ion-card-content>
   </ion-card>
-  <h4>Tendencia</h4>
+  <h4>Síntomas Psicologicos experimentados</h4>
   <ion-card>
     <ion-card-header>
       <img src="assets/img/grafico.jpg"/>
@@ -47,6 +50,6 @@
        numquam vero repudiandae eligendi! Repudiandae?
     </ion-card-content>
   </ion-card>
-  <ion-button
-  expand="full">Regresar</ion-button>
+  
 </ion-content>
+<app-footer></app-footer>

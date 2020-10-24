@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { MenuController, PopoverController } from '@ionic/angular';
+import { PopoverInfoComponent } from 'src/app/components/popover-info/popover-info.component';
 import {componente} from '../../interfaces/interfaces';
 import {AuthService} from '../../servicios/auth.service';
 
@@ -13,7 +14,8 @@ export class ActionSheetPage implements OnInit {
   componentes: componente[]=[];
 
   constructor(private menuCtrl: MenuController,
-    public AuthService: AuthService) { }
+    public AuthService: AuthService,
+    private popoverCtrl: PopoverController) { }
 
   ngOnInit() {
   }
@@ -25,6 +27,16 @@ export class ActionSheetPage implements OnInit {
   Onlogout(){
     this.AuthService.logout();
   } 
+
+  async presentPopover (ev: any) {
+    const popover = await this.popoverCtrl.create({
+      component: PopoverInfoComponent,
+      cssClass: 'my-custom-class',
+      event: ev,
+      translucent: true
+    });
+    return await popover.present();
+  }
 
 }
 

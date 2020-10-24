@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { MenuController, ModalController } from '@ionic/angular';
+import { CalModalPage } from '../../cal-modal/cal-modal.page';
 
 @Component({
   selector: 'app-tratamiento',
@@ -8,12 +9,20 @@ import { MenuController } from '@ionic/angular';
 })
 export class TratamientoPage implements OnInit {
 
-  constructor(private menuCtrl: MenuController) { }
+  constructor(private menuCtrl: MenuController, private modalCtrl: ModalController) { }
 
   ngOnInit() {
   }
   toggleMenu(){
     this.menuCtrl.toggle();
+  }
+  async openModal() { 
+    const modal = this.modalCtrl.create({
+      component: CalModalPage,
+      cssClass: 'cal-modal',
+      backdropDismiss: false
+    });
+    await (await modal).present();
   }
 
 }

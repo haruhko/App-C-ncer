@@ -1,10 +1,20 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar >
-    <ion-buttons slot="start">
-      <ion-back-button text="Atrás" defaultHref="/"></ion-back-button>
-    </ion-buttons>
-    <ion-title 
-    style="text-transform: capitalize;"
-    class="ion-text-center">{{titulo}}</ion-title>
-  </ion-toolbar>
-</ion-header>
+
+<ion-header>
+        <ion-toolbar color="medium">
+            
+            <ion-buttons
+            slot="start">
+                <ion-back-button 
+                color="light"
+                routerLink="/"
+                defaultHref="/"
+                mode="md"></ion-back-button>
+            </ion-buttons>
+    
+            <div class="text-center contenedor">
+                <h2 class="d-inline">Cáncer App</h2>
+                <img src="assets/img/miniicon.png" width="80px" />
+            </div>
+            
+        </ion-toolbar>
+    </ion-header>

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { AutoEvalucionPageRoutingModule } from './auto-evalucion-routing.module';
 
 import { AutoEvalucionPage } from './auto-evalucion.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AutoEvalucionPageRoutingModule
+    AutoEvalucionPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [AutoEvalucionPage]
 })

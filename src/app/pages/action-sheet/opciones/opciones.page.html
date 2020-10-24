@@ -1,73 +1,46 @@
-<ion-header>
-  <ion-toolbar>
-      <ion-buttons
-      slot="start">
-          <ion-button
-          (click)="toggleMenu()">
-              <ion-icon
-              slot="icon-only"
-              name="menu"></ion-icon>
-          </ion-button>
-      </ion-buttons>
-      <ion-title class="ion-text-center">opciones</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
-    <h2>Opciones</h2>
-    <ion-list>
-        <ion-item>
-            <ion-label>Editar Perfil</ion-label>
-            <ion-icon
-            name="chevron-forward"></ion-icon>
-        </ion-item>
-        <ion-item>
-            <ion-label>Cambiar Contraseña</ion-label>
-            <ion-icon
-            name="chevron-forward"></ion-icon>
-        </ion-item>
-    </ion-list>
-    <ion-list>
-        <ion-item>
+<app-header></app-header>
+<ion-content color="secondary">
+    <h2 class="ion-text-center">Opciones</h2>
+    <ion-list class="list">
+        <ion-item color="secondary">
             <ion-label>notificaciones de medicamentos</ion-label>
             <ion-toggle slot="end"></ion-toggle>
           </ion-item>
-          <ion-item>
+          <ion-item color="secondary">
             <ion-label>notificaciones de citas</ion-label>
             <ion-toggle slot="end"></ion-toggle>
           </ion-item>
-          <ion-item>
+          <ion-item color="secondary">
             <ion-label>notificaciones de examenes</ion-label>
             <ion-toggle slot="end"></ion-toggle>
           </ion-item>
     </ion-list>
     
-    <ion-list>
-        <ion-item>
+    <ion-list class="list">
+        <ion-item color="secondary">
             <ion-label>Report and suggest</ion-label>
             <ion-icon
             name="chevron-forward"></ion-icon>
         </ion-item>
-        <ion-item>
+        <ion-item color="secondary">
             <ion-label>Review</ion-label>
             <ion-icon
             name="chevron-forward"></ion-icon>
         </ion-item>
     </ion-list>
 
-    <ion-list>
-        <ion-item>
+    <ion-list class="list">
+        <ion-item color="secondary">
             <ion-label>Terminos de Uso</ion-label>
             <ion-icon
             name="chevron-forward"></ion-icon>
         </ion-item>
-        <ion-item>
+        <ion-item color="secondary">
             <ion-label>Politica de Privacidad</ion-label>
             <ion-icon
             name="chevron-forward"></ion-icon>
         </ion-item>
     </ion-list>
-
+    <p class="ion-text-center">Version 0.0.0.1</p>
 </ion-content>
-<ion-footer>
-    <p>Version 0.0.0.1</p>
-</ion-footer>
+<app-footer></app-footer>

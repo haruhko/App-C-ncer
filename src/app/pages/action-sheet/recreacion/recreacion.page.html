@@ -1,129 +1,102 @@
-<ion-header>
-  <ion-toolbar>
-      <ion-buttons
-      slot="start">
-          <ion-button
-          (click)="toggleMenu()">
-              <ion-icon
-              slot="icon-only"
-              name="menu"></ion-icon>
-          </ion-button>
-      </ion-buttons>
-      <ion-title class="ion-text-center">recreacion</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
-  <h2
-  class="ion-text-center">Recreación</h2>
+<app-headerlogo></app-headerlogo>
+<ion-content color="secondary">
+  <h3 class="ion-text-center">Recreación</h3>
 
-  <div>
-    <h6>Actividades que me gusta hacer:</h6>
-    <ion-list>
-      <ion-item>
-        <ion-checkbox></ion-checkbox>
-        <ion-label>Actividad</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox></ion-checkbox>
-        <ion-label> Actividad 1</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox></ion-checkbox>
-        <ion-label> Actividad 2</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox></ion-checkbox>
-        <ion-label> Actividad 3</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox></ion-checkbox>
-        <ion-label> Otra</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Cual:</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-    </ion-list>
-  </div>
+  <p class="ion-text-justify">Las actividades recreativas y sociales  son fundamentales, 
+    me permiten potenciar funciones cognitivas/mentales, mejorar mi autoimagen y autoestima
+     y fomentar la interacción con otros.</p>
+  <p class="ion-text-justify">Es importante que dedique tiempo a actividades recreativas, 
+    teniendo en cuenta mis gustos y mi condición física.</p>
+  <p class="ion-text-justify">Haré un diagnóstico de mis necesidades y plan de actividades recreativas.</p>
 
-  <div>
-    <h6>Actividades que me gustaría hacer:</h6>
-    <ion-list>
-      <ion-item>
-        <ion-checkbox></ion-checkbox>
-        <ion-label>Actividad</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox></ion-checkbox>
-        <ion-label> Actividad 1</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox></ion-checkbox>
-        <ion-label> Actividad 2</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox></ion-checkbox>
-        <ion-label> Actividad 3</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-checkbox></ion-checkbox>
-        <ion-label> Otra</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>Cual:</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
+  <ion-title>Actividades que me gusta hacer</ion-title>
+  <ion-item color="secondary">
+    <ion-label position="floating">Actividades/Situaciones:</ion-label>
+    <ion-select  multiple="true" placeholder="Seleccione una o varias" class="input" ok-text="Aceptar" cancel-text="Cancelar">
+      <ion-select-option >Caminar</ion-select-option>
+      <ion-select-option >Escuchar música</ion-select-option>
+      <ion-select-option >Cocinar</ion-select-option>
+      <ion-select-option >Leer</ion-select-option>
+      <ion-select-option >Escribir</ion-select-option>
+      <ion-select-option >Cantar</ion-select-option>
+      <ion-select-option >Actuar</ion-select-option>
+      <ion-select-option >Practicar un deporte</ion-select-option>
+      <ion-select-option >Ver televisión</ion-select-option>
+      <ion-select-option >Ver películas</ion-select-option>
+      <ion-select-option >Explorar mis redes sociales</ion-select-option>
+      <ion-select-option >Bailar</ion-select-option>
+      <ion-select-option >Pintar</ion-select-option>
+      <ion-select-option >Dibujar</ion-select-option>
+      <ion-select-option >Coser/tejer</ion-select-option>
+      <ion-select-option >Ir a cine</ion-select-option>
+      <ion-select-option >Visitar a la familia</ion-select-option>
+      <ion-select-option >Visitar centros comerciales</ion-select-option>
+      <ion-select-option >Ir de compras</ion-select-option>
+    </ion-select>
+  </ion-item>
 
-      <ion-item>
-        <ion-label>Numero de días:</ion-label>
-        <ion-select>
-          <ion-select-option>1</ion-select-option>
-          <ion-select-option>2</ion-select-option>
-        </ion-select>
-      </ion-item>
+  <ion-item color="secondary">
+   <ion-label position="floating">Otro:</ion-label>
+   <ion-input placeHolder="¿Cuál?" class="input"></ion-input>
+  </ion-item>
 
-      <ion-item>
-        <ion-label>Duración:</ion-label>
-        <ion-select>
-          <ion-select-option>1</ion-select-option>
-          <ion-select-option>2</ion-select-option>
-        </ion-select>
-      </ion-item>
 
-      <ion-item>
-        <ion-label>Horario:</ion-label>
-        <ion-select>
-          <ion-select-option>1</ion-select-option>
-          <ion-select-option>2</ion-select-option>
-        </ion-select>
-      </ion-item>
+  <ion-title>Situaciones/actividades que son aburridas <br>y monótonas para mi</ion-title>
 
-    </ion-list>
-  </div>
+  <ion-item color="secondary">
+    <ion-label position="floating">Actividades/Situaciones:</ion-label>
+    <ion-textarea placeHolder="¿Cuáles?" class="input"></ion-textarea>
+   </ion-item>
 
+  <ion-title>Actividades que me gustaría hacer o<br> practicar</ion-title>
+  <ion-item color="secondary">
+    <ion-label position="floating">Actividades/Situaciones:</ion-label>
+    <ion-select  multiple="true" placeholder="Seleccione una o varias" class="input" ok-text="Aceptar" cancel-text="Cancelar">
+      <ion-select-option >Caminar</ion-select-option>
+      <ion-select-option >Escuchar música</ion-select-option>
+      <ion-select-option >Cocinar</ion-select-option>
+      <ion-select-option >Leer</ion-select-option>
+      <ion-select-option >Escribir</ion-select-option>
+      <ion-select-option >Cantar</ion-select-option>
+      <ion-select-option >Actuar</ion-select-option>
+      <ion-select-option >Practicar un deporte</ion-select-option>
+      <ion-select-option >Ver televisión</ion-select-option>
+      <ion-select-option >Ver películas</ion-select-option>
+      <ion-select-option >Explorar mis redes sociales</ion-select-option>
+      <ion-select-option >Bailar</ion-select-option>
+      <ion-select-option >Pintar</ion-select-option>
+      <ion-select-option >Dibujar</ion-select-option>
+      <ion-select-option >Coser/tejer</ion-select-option>
+      <ion-select-option >Ir a cine</ion-select-option>
+      <ion-select-option >Visitar a la familia</ion-select-option>
+      <ion-select-option >Visitar centros comerciales</ion-select-option>
+      <ion-select-option >Ir de compras</ion-select-option>
+    </ion-select>
+  </ion-item>
+<!--COLOCAR RESTRICCIONES EN LOS INPUTS-->
+  <ion-item color="secondary">
+    <ion-label position="floating">Número de días a la semana:</ion-label>
+    <ion-input placeHolder="1 a 7" class="input"></ion-input>
+   </ion-item>
+
+   <ion-item color="secondary">
+    <ion-label position="floating">Duración:</ion-label>
+    <ion-input placeHolder="0 a 24 horas" class="input"></ion-input>
+   </ion-item>
+
+   <ion-item color="secondary">
+    <ion-label position="floating">Horario:</ion-label>
+    <ion-select  multiple="true" placeholder="Seleccione una o varias" class="input" ok-text="Aceptar" cancel-text="Cancelar">
+      <ion-select-option >Mañana</ion-select-option>
+      <ion-select-option >Tarde</ion-select-option>
+      <ion-select-option >Noche</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  
+  <ion-button expand="block"   color="success">
+    Guardar
+</ion-button>
+<ion-button (click)="close()" expand="block" >Regresar</ion-button>
 </ion-content>
-<ion-footer>
-    <ion-grid>
-        <ion-row>
-          <ion-col
-          class="ion-align-self-start">
-            <div>
-                <ion-button 
-                color="success">
-                  Guardar
-                </ion-button> 
-            </div>
-          </ion-col>
-          
-          <ion-col
-          class="ion-align-self-end">
-            <div>
-                <ion-button 
-                color="success">
-                  Cancelar
-                </ion-button> 
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-</ion-footer>
+<app-footer></app-footer>

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { Estadisticas2PageRoutingModule } from './estadisticas2-routing.module';
 
 import { Estadisticas2Page } from './estadisticas2.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Estadisticas2PageRoutingModule
+    Estadisticas2PageRoutingModule,
+    ComponentsModule
   ],
   declarations: [Estadisticas2Page]
 })

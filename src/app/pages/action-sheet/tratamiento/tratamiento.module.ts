@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { TratamientoPageRoutingModule } from './tratamiento-routing.module';
 
 import { TratamientoPage } from './tratamiento.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TratamientoPageRoutingModule
+    TratamientoPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [TratamientoPage]
 })

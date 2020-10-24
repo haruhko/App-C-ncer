@@ -1,0 +1,30 @@
+.child-item{
+    --ion-item-background: #f3f2f1;
+    --padding-start:8px;
+    --inner-padding-end:8px;
+    margin-bottom: 2px;
+}
+
+*{
+    font-family: Ancizar;
+}
+
+.input{
+    
+    border-radius: 20px;
+    margin-bottom: 5%;
+    
+    margin-top: 1%;
+    background-color:rgb(177, 178, 176) ;
+    border: none;
+    outline: none;
+}
+
+.btn1{
+    color:  #858181;
+}
+
+img{
+    height: 150px;
+    width: 150px;
+}

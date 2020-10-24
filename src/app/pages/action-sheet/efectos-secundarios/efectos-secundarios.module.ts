@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { EfectosSecundariosPageRoutingModule } from './efectos-secundarios-routing.module';
 
 import { EfectosSecundariosPage } from './efectos-secundarios.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EfectosSecundariosPageRoutingModule
+    EfectosSecundariosPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [EfectosSecundariosPage]
 })
