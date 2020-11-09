@@ -39,13 +39,25 @@
           <ion-avatar slot="start">
             <img src="https://picsum.photos/200/300?random=1">
           </ion-avatar>
-          <ion-title>Nombre de Usuario</ion-title>
+          <ion-title style="text-transform: capitalize;">{{name}}</ion-title>
         </ion-item>
       
         
 <ion-card>
     <ion-card-content>
         <p class="ion-text-justify">Nuestra aplicación te ayudará a conocer más de tu experiencia y dar un mejor manejo a tu enfermedad.</p>
+       
+        <ion-list>
+            <ion-item-sliding>
+                <ion-item>
+                    <ion-label>Awesome Label</ion-label>
+                </ion-item>
+                <ion-item-options>
+                    <ion-item-option (click)="openCrud(user.id_user)"></ion-item-option>
+                    <ion-item-option (click)="delData(user.id_user)"></ion-item-option>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-list>
     </ion-card-content>
 </ion-card>
 <ion-card>
@@ -55,23 +67,31 @@
         <p class="ion-text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, ea alias. 
             Voluptates itaque veniam officiis modi a eligendi totam quisquam, 
             alias reiciendis maiores necessitatibus cum suscipit, cumque nemo voluptate porro.</p>
-    </ion-card-content>
+            <ion-button   (click)="prosesLogout()"
+            expand="full">salir</ion-button>
+        </ion-card-content>
+   
 </ion-card>
          
-        
-      
-       
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" size="small" (click)="openCrud('0')">
+        <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    
+</ion-fab>        
+
+
          
             
            
         
      
-    <br>
+    
     
      
     
 
-<!--<ion-button   (click)="Onlogout()"
+<!--<ion-button   (click)="prosesLogout()"
 expand="full">salir</ion-button>-->
     
 </ion-content>

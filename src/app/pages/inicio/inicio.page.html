@@ -25,7 +25,7 @@
     class="list"> 
     <ion-item color="secondary">
       <ion-input
-        [(ngModel)]="email" 
+        [(ngModel)]="email_address" 
         placeholder="Correo electrónico"
         class="input"
         type="email"
@@ -38,7 +38,7 @@
       </ion-input>
     </ion-item>
 
-      <br>
+      <br> 
 
     <ion-item
       color="secondary">
@@ -62,9 +62,10 @@
   <ion-grid>
     <ion-row>
       <ion-col>
+      <!--Sepuede cambiar la funcion para loguear con firebase por  OnSubmitLogin()-->
         <ion-button 
           color="success"
-          (click)="OnSubmitLogin()" 
+          (click)="tryLogin()" 
           mode="ios"
           class="btn-success mx-auto d-block">
 
@@ -93,7 +94,7 @@
 
   <div 
     class="ion-text-center ion-margin-top">
-      <a routerLink="/registro">
+      <a (click)=" OnSubmitLogin()">
         <small
           class="le">
 

@@ -16,6 +16,7 @@
              Nombre:
            </ion-label>
            <ion-input 
+           [(ngModel)]="your_name" 
            placeholder="" 
            class="input"
            ></ion-input>
@@ -28,6 +29,7 @@
               Correo electronico:
             </ion-label>
             <ion-input 
+            [(ngModel)]="email_address" 
             placeholder="" 
             class="input"
             type="email"></ion-input>
@@ -40,6 +42,7 @@
               Contraseña:
             </ion-label>
             <ion-input 
+            [(ngModel)]="password" 
             placeholder=""
             type="password"
             class="input"></ion-input>
@@ -51,8 +54,11 @@
             <ion-label position="floating">
                   Confirmación de contraseña:
             </ion-label>
-            <ion-input placeholder="" 
-            class="input"></ion-input>
+            <ion-input 
+            [(ngModel)]="confirm_pass" 
+            placeholder="" 
+            class="input"
+            type="password"></ion-input>
           </ion-item>
           
           <ion-item
@@ -61,7 +67,8 @@
            <ion-label position="floating">
              Celular:
            </ion-label>
-           <ion-input 
+           <ion-input
+           [(ngModel)]="telefono"  
            placeholder="" 
            type="tel"
            class="input"></ion-input>
@@ -88,6 +95,7 @@
          
          <ion-datetime displayFormat="DD/MMM/YYYY"
          placeholder="DD/MM/YYYY"
+         [(ngModel)]="date_birth" 
          class="input"
          Cancel-text="cancelar"
          Done-text="Aceptar">
@@ -103,7 +111,8 @@
           <ion-select class="input"
           placeholder="Seleccione"
           cancel-text="Cancelar"
-          ok-text="Aceptar">
+          ok-text="Aceptar"
+          [(ngModel)]="gender" >
             <ion-select-option>Femenino</ion-select-option>
             <ion-select-option>Masculino</ion-select-option>
         </ion-select>
@@ -118,7 +127,8 @@
            <ion-select class="input"
           placeholder="seleccione"
           cancel-text="cancelar"
-          ok-text="aceptar">
+          ok-text="aceptar"
+          [(ngModel)]="document" >
               <ion-select-option>Cedula de ciudadania</ion-select-option>
               <ion-select-option>Tarjeta de identidad</ion-select-option>
               <ion-select-option>Registro civil </ion-select-option>
@@ -140,7 +150,8 @@
            </ion-label>
            <ion-input 
            placeholder=""
-           class="input"></ion-input>
+           class="input"
+           [(ngModel)]="document_number" ></ion-input>
          </ion-item>
          
          <ion-item
@@ -152,7 +163,8 @@
            <ion-select class="input"
           placeholder="seleccione"
           cancel-text="cancelar"
-          ok-text="aceptar">
+          ok-text="aceptar"
+          [(ngModel)]="eps" >
               <ion-select-option>AIC-EPSI</ion-select-option>
               <ion-select-option>Aliansalud EPS</ion-select-option>
               <ion-select-option>Ambuq EPS</ion-select-option>
@@ -214,9 +226,41 @@
             <ion-select class="input"
           placeholder="seleccione"
           cancel-text="cancelar"
-          ok-text="aceptar">
-        <ion-select-option>1</ion-select-option>
-        <ion-select-option>2</ion-select-option>
+          ok-text="aceptar"
+          [(ngModel)]="departamento" >
+        <ion-select-option>Amazonas</ion-select-option>
+        <ion-select-option>Antioquia</ion-select-option>
+        <ion-select-option>Arauca</ion-select-option>
+        <ion-select-option>Atlántico</ion-select-option>
+        <ion-select-option>Bogotá D.C.</ion-select-option>
+        <ion-select-option>Bolívar</ion-select-option>
+        <ion-select-option>Boyacá</ion-select-option>
+        <ion-select-option>Caldas</ion-select-option>
+        <ion-select-option>Caquetá</ion-select-option>
+        <ion-select-option>Casanare</ion-select-option>
+        <ion-select-option>Cauca</ion-select-option>
+        <ion-select-option>Cesar</ion-select-option>
+        <ion-select-option>Chocó</ion-select-option>
+        <ion-select-option>Córdoba</ion-select-option>
+        <ion-select-option>Cundinamarca</ion-select-option>
+        <ion-select-option>Guainía</ion-select-option>
+        <ion-select-option>Guaviare</ion-select-option>
+        <ion-select-option>Huila</ion-select-option>
+        <ion-select-option>La Guajira</ion-select-option>
+        <ion-select-option>Magdalena</ion-select-option>
+        <ion-select-option>Meta</ion-select-option>
+        <ion-select-option>Nariño</ion-select-option>
+        <ion-select-option>Norte de Santander</ion-select-option>
+        <ion-select-option>Putumayo</ion-select-option>
+        <ion-select-option>Quindío</ion-select-option>
+        <ion-select-option>Risaralda</ion-select-option>
+        <ion-select-option>San Andrés y Providencia</ion-select-option>
+        <ion-select-option>Santander</ion-select-option>
+        <ion-select-option>Sucre</ion-select-option>
+        <ion-select-option>Tolima</ion-select-option>
+        <ion-select-option>Valle del Cauca</ion-select-option>
+        <ion-select-option>Vaupés</ion-select-option>
+        <ion-select-option>Vichada</ion-select-option>
         </ion-select>
           </ion-item>
           
@@ -229,9 +273,42 @@
             <ion-select class="input"
           placeholder="seleccione"
           cancel-text="cancelar"
-          ok-text="aceptar">
-        <ion-select-option>1</ion-select-option>
-        <ion-select-option>2</ion-select-option>
+          ok-text="aceptar"
+          [(ngModel)]="municipio" >
+          <ion-select-option>Leticia</ion-select-option>
+          <ion-select-option>Medellín</ion-select-option>
+          <ion-select-option>Arauca</ion-select-option>
+          <ion-select-option>Barranquilla</ion-select-option>
+          <ion-select-option>Bogotá D.C</ion-select-option>
+          <ion-select-option>Cartagena
+          </ion-select-option>
+          <ion-select-option>Tunja</ion-select-option>
+          <ion-select-option>Manizales</ion-select-option>
+          <ion-select-option>Florencia</ion-select-option>
+          <ion-select-option>Yopal</ion-select-option>
+          <ion-select-option>Popayán</ion-select-option>
+          <ion-select-option>Valledupar</ion-select-option>
+          <ion-select-option>Quibdó</ion-select-option>
+          <ion-select-option>Montería</ion-select-option>
+          <ion-select-option>Bogotá</ion-select-option>
+          <ion-select-option>Inírida</ion-select-option>
+          <ion-select-option>San José del Guaviare</ion-select-option>
+          <ion-select-option>Neiva</ion-select-option>
+          <ion-select-option>Riohacha</ion-select-option>
+          <ion-select-option>Villavicencio</ion-select-option>
+          <ion-select-option>Pasto</ion-select-option>
+          <ion-select-option>Cúcuta</ion-select-option>
+          <ion-select-option>Mocoa</ion-select-option>
+          <ion-select-option>Armenia</ion-select-option>
+          <ion-select-option>Pereira</ion-select-option>
+          <ion-select-option>San Andrés</ion-select-option>
+          <ion-select-option>Bucaramanga</ion-select-option>
+          <ion-select-option>Sincelejo</ion-select-option>
+          <ion-select-option>Ibagué</ion-select-option>
+          <ion-select-option>Cali</ion-select-option>
+          <ion-select-option>Mitú</ion-select-option>
+          <ion-select-option>Puerto Carreño</ion-select-option>
+          <ion-select-option>Santa Marta</ion-select-option>
         </ion-select>
           </ion-item>
 
@@ -241,23 +318,25 @@
           class="item"
           color="secondary">
             <ion-label position="floating">
-              Nombre:
+              Nombre del cuidador:
             </ion-label>
             <ion-input 
             placeholder=""
-            class="input"></ion-input>
+            class="input"
+            [(ngModel)]="cuidador_name" ></ion-input>
           </ion-item>
 
           <ion-item
           class="item"
           color="secondary">
             <ion-label position="floating">
-              Celular:
+              Celular del cuidador:
             </ion-label>
             <ion-input 
             placeholder=""
             class="input"
-            type="tel"></ion-input>
+            type="tel"
+            [(ngModel)]="cuidador_telefono" ></ion-input>
           </ion-item>
           
         </ion-list>
@@ -280,7 +359,8 @@
             <ion-select class="input"
             placeholder="seleccione"
             cancel-text="cancelar"
-            ok-text="aceptar">
+            ok-text="aceptar"
+            [(ngModel)]="cancer_tipo" >
           <ion-select-option>1</ion-select-option>
           <ion-select-option>2</ion-select-option>
           </ion-select>
@@ -295,7 +375,8 @@
               <ion-select class="input"
           placeholder="seleccione"
           cancel-text="cancelar"
-          ok-text="aceptar">
+          ok-text="aceptar"
+          [(ngModel)]="estadio" >
         <ion-select-option>0</ion-select-option>
         <ion-select-option>1</ion-select-option>
         <ion-select-option>2</ion-select-option>
@@ -314,7 +395,8 @@
             placeholder="DD/MM/YYYY"
             class="input"
             Cancel-text="cancelar"
-            Done-text="Aceptar"></ion-datetime>
+            Done-text="Aceptar"
+            [(ngModel)]="date_diagnostico" ></ion-datetime>
           </ion-item>
 
           <ion-item
@@ -325,8 +407,8 @@
             </ion-label>
             <ion-input 
             placeholder="" 
-            style="text-transform: capitalize;"
-            class="input"></ion-input>
+            class="input"
+            [(ngModel)]="comorbilidades" ></ion-input>
           </ion-item>
         </ion-list>
       </div>
@@ -347,8 +429,8 @@
             </ion-label>
             <ion-input 
             placeholder="" 
-            style="text-transform: capitalize;"
-            class="input"></ion-input>
+            class="input"
+            [(ngModel)]="medico_tratante" ></ion-input>
           </ion-item>
           
           <ion-item
@@ -359,8 +441,8 @@
             </ion-label>
             <ion-input 
             placeholder="" 
-            style="text-transform: capitalize;"
-            class="input"></ion-input>
+            class="input"
+            [(ngModel)]="farmacia" ></ion-input>
           </ion-item>
           
           <ion-item
@@ -371,8 +453,8 @@
             </ion-label>
             <ion-input 
             placeholder="" 
-            style="text-transform: capitalize;"
             class="input"
+            [(ngModel)]="hospital" 
             ></ion-input>
           </ion-item>
           
@@ -384,13 +466,35 @@
             </ion-label>
             <ion-input 
             placeholder="" 
-            style="text-transform: capitalize;"
-            class="input"></ion-input>
+            class="input"
+            [(ngModel)]="urgencias" ></ion-input>
           </ion-item>
+
+          <ion-grid fixed>
+           
+            <ion-row>
+                <ion-col size="">
+                   
+                </ion-col>
+    
+                <ion-col size="8">
+                    <ion-button  (click)="uploadPicture()" color="primary"  class="mx-auto d-block">
+                        Agregar foto de perfil
+                     </ion-button>
+                </ion-col>
+
+                <ion-col size="">
+                   
+                </ion-col>
+    
+                
+            </ion-row>
+        </ion-grid>
+        <img *ngIf="imagen_perfil" [src]="imagen_perfil" alt="imagen_perfil" class="mx-auto d-block">
     </ion-list>
   </div>
   <div>
-    <ion-button  color="success" routerLink="/action-sheet">Registrar</ion-button>
+    <ion-button  color="success" (click)="tryRegister()">Registrar</ion-button>
     <br>
     <ion-button  color="danger"  (click)="Onlogout()">Cancelar</ion-button>
   </div>

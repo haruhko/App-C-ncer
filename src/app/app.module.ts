@@ -17,6 +17,12 @@ import {AngularFireModule} from '@angular/fire';
 
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {HttpClientModule} from '@angular/common/http';
+import {IonicStorageModule} from '@ionic/storage';
+import { AccessProviders } from './providers/access_providers';
+
+
+import {Camera} from '@ionic-native/camera/ngx';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,11 +33,15 @@ import {HttpClientModule} from '@angular/common/http';
      ComponentsModule,
      AngularFireModule.initializeApp(firebaseConfig),
      AngularFireAuthModule,
-     HttpClientModule
+     HttpClientModule,
+     IonicStorageModule.forRoot()
     ],
   providers: [
     StatusBar,
     SplashScreen,
+    AccessProviders,
+    Camera,
+    WebView,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

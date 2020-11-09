@@ -3,8 +3,10 @@ import {AuthService} from '../../servicios/auth.service';
 import {Router} from '@angular/router'; 
 import { EmptyError } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { ActionSheetController, AlertController } from '@ionic/angular';
+import { ActionSheetController, AlertController, LoadingController, ToastController, NavController } from '@ionic/angular';
 import { Button } from 'protractor';
+import { Storage } from '@ionic/storage';
+import { AccessProviders } from 'src/app/providers/access_providers';
 
 @Component({
   selector: 'app-inicio',
@@ -14,24 +16,34 @@ import { Button } from 'protractor';
 export class InicioPage implements OnInit {
 
   email:string;
-  password:string;
   showPassword = false;
   
+  email_address: string = '';
+  password: string = '';
+  disabledButton;
+ 
   
-
-  
-
+//MODIFICAR LOS GUARDS PARA QUE PUEDAN LOGUEAR CORRECTAMENTE
 
   constructor(private authService: AuthService, 
               public router: Router, 
               private http:  HttpClient,
               private alertCtrl: AlertController,
-              public actionSheetController: ActionSheetController) { }
+              public actionSheetController: ActionSheetController,
+              private toastCtrl: ToastController,
+              private loadingCtrl: LoadingController,
+              public navCtrl: NavController,
+              private accsPrvds: AccessProviders,
+              private storage: Storage) { }
   
  
   ngOnInit() {
   }
 
+  ionViewOldEnter(){
+    this.disabledButton = false;
+  }
+ 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
       header: 'Iniciar Sesión',
@@ -70,17 +82,12 @@ export class InicioPage implements OnInit {
 
     
   }
-  
-//datos={}
-  //apiUrl='http://localhost/Unalapp/';
 
   OnSubmitLogin()
   {
-    this.authService.login(this.email, this.password).then( res =>{
+    this.authService.login(this.email_address, this.password).then( res =>{
     this.router.navigate(['/action-sheet']);
    }).catch(err => alert('los datos son incorrectos'));
-   
-
     //console.log(this.datos);
     //this.http.post(this.apiUrl, JSON.stringify(this.datos))
     //.subscribe(data=>{
@@ -90,6 +97,52 @@ export class InicioPage implements OnInit {
       //console.log(err);
     //}
     //);
+  }
+
+  async tryLogin(){
+    if (this.email_address == '') {
+      this.presentToast('Correo eléctronico requerido');
+    }else if (this.password == '') {
+      this.presentToast('Contraseña requerida');
+    }else{
+      this.disabledButton = true;
+      const loader = await this.loadingCtrl.create({
+        message: 'Cargando......',
+      });
+      loader.present();
+      return new Promise(resolve => {
+        let body = {
+          aksi: 'proses_login',
+          email_address: this.email_address,
+          password: this.password
+        }
+        this.accsPrvds.postData(body, 'proses-api.php').subscribe((res: any) => {
+          if(res.success==true){
+            loader.dismiss();
+            this.disabledButton = false;
+            this.presentToast('Inicio de sesión exitoso.');
+            this.storage.set('storage_xxx', res.result); // create storage session
+            this.navCtrl.navigateRoot(['/action-sheet']);
+          }else{
+            loader.dismiss();
+            this.disabledButton = false;
+            this.presentToast('El correo o contraseña errado.');
+          }
+        },(err)=>{
+          loader.dismiss();
+            this.disabledButton = false;
+            this.presentToast('Timeot');
+        });
+      });
+    }
+  }
+
+  async presentToast(msg){
+    const toast = await this.toastCtrl.create({
+      message: msg,
+      duration: 1500
+    });
+    toast.present();
   }
 
   
