@@ -1,5 +1,6 @@
+import { Storage } from '@ionic/storage';
 import { Component, OnInit } from '@angular/core';
-import { PopoverController } from '@ionic/angular';
+import { PopoverController, NavController, ToastController } from '@ionic/angular';
 import {AuthService} from '../../servicios/auth.service';
 
 @Component({
@@ -9,8 +10,12 @@ import {AuthService} from '../../servicios/auth.service';
 })
 export class PopoverInfoComponent implements OnInit {
 
-  constructor(public AuthService: AuthService,
-    private popoverCtrl: PopoverController) { }
+  constructor(
+    public AuthService: AuthService,
+    private popoverCtrl: PopoverController,
+    private storage: Storage,
+    private navCtrl: NavController,
+    private toastCtrl: ToastController) { }
 
   ngOnInit() {}
   
@@ -18,7 +23,16 @@ export class PopoverInfoComponent implements OnInit {
     this.AuthService.logout();
     this.popoverCtrl.dismiss();
   } 
-
+  async prosesLogout(){
+    this.storage.clear();
+    this.navCtrl.navigateRoot(['/inicio']);
+    const toast = await this.toastCtrl.create({
+      message: 'Cierre de sesión exitoso.',
+      duration: 1100
+    });
+    toast.present();
+    this.popoverCtrl.dismiss();
+  }
   onClick(){
     this.popoverCtrl.dismiss();
   }

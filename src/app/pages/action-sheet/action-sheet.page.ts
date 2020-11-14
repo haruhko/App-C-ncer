@@ -7,6 +7,7 @@ import {AuthService} from '../../servicios/auth.service';
 import { AccessProviders } from 'src/app/providers/access_providers';
 import { Storage } from '@ionic/storage';
 
+
 @Component({
   selector: 'app-action-sheet',
   templateUrl: './action-sheet.page.html',
@@ -18,9 +19,9 @@ export class ActionSheetPage implements OnInit {
   datastorage: any;
   name: string;
 
-  //users: any = [];
-  //limit: number = 13; //limit get data
-  //start: number = 0;
+  users: any = [];
+  limit: number = 20; //limit get data
+  start: number = 0;
 
   constructor(
     private menuCtrl: MenuController,
@@ -35,57 +36,71 @@ export class ActionSheetPage implements OnInit {
     public navCtrl: NavController) { }
 
   ngOnInit() {
-    this.storage.get('storage_xxx').then((res) => {
-      console.log(res);
-      this.datastorage = res;
-      this.name = this.datastorage.your_name;
-    });
 
-    //this.start = 0;
-    //this.users = [];
-    //this.loadUsers();
+  }
+  async presentToast(msg){
+    const toast = await this.toastCtrl.create({
+      message: msg,
+      duration: 1500
+    });
+    toast.present();
   }
 
-  //async loadUsers(){
-    //return new Promise(resolve => {
-      //let body = {
-        //aski:'load_users',
-        //start: this.start,
-        //limit: this.limit
-      //};
-      //this.accsPrvds.postData(body, 'proses-api.php').subscribe((res:any) =>{
-        //for(let datas of res.result){ //specail if you wnat to use ininiti scroll load data per limit
-          //this.users.push(datas);
+  async loadUsers(){
+    return new Promise(resolve => {
+      let body = {
+        aski:'load_users',
+        start: this.start,
+        limit: this.limit
+      };
 
-        //};
-        //resolve(true);
-      //});
-    //});
-  //}
+      this.accsPrvds.postData(body, 'proses-api.php').subscribe((res:any) =>{
+        for(let datas of res.result){ //specail if you wnat to use ininiti scroll load data per limit
+          this.users.push(datas);
 
-  //async delData(){
+        };
+        resolve(true);
+    });
+  });
+  }
 
-  //}
+  async delData(a){
+    return new Promise(resolve => {
+      let body = {
+        aski:'del_users',
+        id: a
+      };
 
-  //loadData(){
-   // this.start += this.limit;
-    //setTimeout(() =>{
-      //this.loadUsers.().then(() =>{
-        //event.target.complete();
-      //});
-    //}, 500);
-  //}
+      this.accsPrvds.postData(body, 'proses-api.php').subscribe((res:any) =>{
+       if(res.success==true){
+         this.presentToast('Eliminado exitosamente.');
+         this.ionViewDidEnter();
+       }else{
+         this.presentToast('Error.');
+       }
+    });
+  });
+  }
+
+  loadData(event){
+    this.start += this.limit;
+    setTimeout(() =>{
+      this.loadUsers().then(() =>{
+        event.target.complete();
+      });
+    }, 500);
+  }
 
 
-  //async doRefresh(event){
-    //const loader = await this.loadingCtrl.create({
-      //message: 'Please wait...',
-    //});
-    //loader.present();
-    //this.ngOnInit();
-    //event.target.complete();
-    //loader.dismiss();
-  //}
+  async doRefresh(event){
+    const loader = await this.loadingCtrl.create({
+      message: 'Please wait...',
+    });
+    loader.present();
+    this.ionViewDidEnter();
+    event.target.complete();
+    loader.dismiss();
+  }
 
   toggleMenu(){
     this.menuCtrl.toggle();
@@ -114,10 +129,22 @@ export class ActionSheetPage implements OnInit {
     });
     toast.present();
   }
+  ionViewDidEnter(){
+    this.storage.get('storage_xxx').then((res) => {
+      console.log(res);
+      this.datastorage = res;
+      this.name = this.datastorage.your_name;
+    });
+    this.start = 0;
+    this.users = [];
+    this.loadUsers();
+  }
 
- // openCrud(a){
-   // this.router.navigate(['/action-sheet/mi-plan/' +a]);
-  //}
+  openCrud(a){
+    this.router.navigate(['/crud/' +a]);
+  }
+
+ 
 
 }
 

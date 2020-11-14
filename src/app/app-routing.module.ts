@@ -1,32 +1,31 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import {AuthGuard} from './guards/auth.guard';
+/** 
+ * import {AuthGuard} from './guards/auth.guard';
 import {NologinGuard} from './guards/nologin.guard';
+*/
+
 
 const routes: Routes = [
  
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'action-sheet',
     pathMatch: 'full'
   },
   {
     path: 'inicio',
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule),
-    canActivate: [NologinGuard]
+    //canActivate: [NologinGuard]
   },
   {
     path: 'registro',
     loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
-    path: 'alert',
-    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
-  },
-  {
     path: 'action-sheet',
     loadChildren: () => import('./pages/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule),
-    canActivate: [AuthGuard]
+    //canActivate: [AuthGuard]
   },
   {
     path: 'cal-modal',
@@ -63,6 +62,14 @@ const routes: Routes = [
   {
     path: 'apoyar-modal',
     loadChildren: () => import('./pages/apoyar-modal/apoyar-modal.module').then( m => m.ApoyarModalPageModule)
+  },
+  {
+    path: 'intro',
+    loadChildren: () => import('./pages/intro/intro.module').then( m => m.IntroPageModule)
+  },
+  {
+    path: 'crud/:id',
+    loadChildren: () => import('./pages/crud/crud.module').then( m => m.CrudPageModule)
   }
  
  

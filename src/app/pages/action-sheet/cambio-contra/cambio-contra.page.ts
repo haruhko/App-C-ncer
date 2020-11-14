@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cambio-contra.page.scss'],
 })
 export class CambioContraPage implements OnInit {
-
+ 
   constructor() { }
 
   ngOnInit() {
   }
+
+
 
 }

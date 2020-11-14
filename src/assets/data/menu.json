@@ -50,6 +50,11 @@
     "icon": "analytics-outline",
     "name": "Tendencias",
     "redirectTo": "/estadisticas2"
+},
+{
+    "icon": "add",
+    "name": "intro",
+    "redirectTo": "/intro"
 }
 
 

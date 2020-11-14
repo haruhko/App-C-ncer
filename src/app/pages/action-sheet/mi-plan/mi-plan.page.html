@@ -36,7 +36,33 @@
                 <ion-label>Hábito</ion-label>
                 <ion-label>Estrategia</ion-label>
             </ion-item>
+           
+            <ion-item-sliding #slide>
+                <ion-item color="secondary">
+                    <ion-label>agregar habito</ion-label>
+                    <ion-label>agregar estrategia</ion-label>
+                    <ion-button fill="clear" class="button1" (click)="cerrar(slide)">
+                         <ion-icon name="chevron-back-outline"slot="icon-only" *ngIf="!automaticClose"></ion-icon>
+                         <ion-icon name="chevron-forward-outline" slot="icon-only" *ngIf="automaticClose"></ion-icon>
+                    </ion-button>
+                </ion-item>
+                 
+                <ion-item-options>
+                    <ion-button  fill="clear" class="button1">
+                        ver
+                    </ion-button>
+                    <ion-button color="success" fill="clear" >
+                        <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+                    </ion-button>
+                    <ion-button color="danger" fill="clear" >
+                        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+                    </ion-button>
+                </ion-item-options>
+            </ion-item-sliding>
+
+           
         </ion-list>
+    
     </div>
     
   

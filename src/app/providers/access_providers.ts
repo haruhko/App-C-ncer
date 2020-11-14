@@ -7,7 +7,7 @@ import { timeout } from 'rxjs/operators';
 @Injectable()
 export class AccessProviders {
   // url backend api json
-  server: string = 'http://localhost/tutorial/api/'
+  server: string = 'http://localhost/Backend-Unal/public/api/'
   constructor(private http: HttpClient){}
 
   postData(body, file){

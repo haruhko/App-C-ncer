@@ -59,45 +59,45 @@ export class RegistroPage implements OnInit {
   }
 
   async tryRegister(){
-    if (this.your_name == '') {
-      this.presentToast('Nombre requerido');
-    }else if (this.gender == '') {
-      this.presentToast('Sexo requerido');
-    }else if (this.date_birth == '') {
-      this.presentToast('Fecha de nacimiento requerida');
-    }else if (this.email_address == '') {
-      this.presentToast('Correo electrónico requerido');
-    }else if (this.telefono == '') {
-      this.presentToast('Numero de celular requerido');
-    }else if (this.document == '') {
-      this.presentToast('Tipo de documento requerido');
-    }
-    else if (this.document_number == '') {
-      this.presentToast('Numero de documento requerido');
-    }
-    else if (this.eps == '') {
-     this.presentToast('EPS requerida');
-    }
-   else if (this.departamento == '') {
-     this.presentToast('Departamento requerido');
-    }
-    else if (this.municipio == '') {
-      this.presentToast('Municipio requerido');
-    }
-    else if (this.estadio == '') {
-      this.presentToast('Estadio de cáncer requerido');
-    }
-    else if (this.date_diagnostico == '') {
-      this.presentToast('Fecha de diagnóstico requerida');
-    }
-    else if (this.comorbilidades == '') {
-      this.presentToast('Comorbilidades requerido');
-    }
-     else if (this.password == '') {
-      this.presentToast('Contraseña requerida');
-    }else if (this.confirm_pass != this.password) {
-      this.presentToast('Las contraseñas no coinciden');
-    }else{
+  //   if (this.your_name == '') {
+  //     this.presentToast('Nombre requerido');
+  //   }else if (this.gender == '') {
+  //     this.presentToast('Sexo requerido');
+  //   }else if (this.date_birth == '') {
+  //     this.presentToast('Fecha de nacimiento requerida');
+  //   }else if (this.email_address == '') {
+  //     this.presentToast('Correo electrónico requerido');
+  //   }else if (this.telefono == '') {
+  //     this.presentToast('Numero de celular requerido');
+  //   }else if (this.document == '') {
+  //     this.presentToast('Tipo de documento requerido');
+  //   }
+  //   else if (this.document_number == '') {
+  //     this.presentToast('Numero de documento requerido');
+  //   }
+  //   else if (this.eps == '') {
+  //    this.presentToast('EPS requerida');
+  //   }
+  //  else if (this.departamento == '') {
+  //    this.presentToast('Departamento requerido');
+  //   }
+  //   else if (this.municipio == '') {
+  //     this.presentToast('Municipio requerido');
+  //   }
+  //   else if (this.estadio == '') {
+  //     this.presentToast('Estadio de cáncer requerido');
+  //   }
+  //   else if (this.date_diagnostico == '') {
+  //     this.presentToast('Fecha de diagnóstico requerida');
+  //   }
+  //   else if (this.comorbilidades == '') {
+  //     this.presentToast('Comorbilidades requerido');
+  //   }
+  //    else if (this.password == '') {
+  //     this.presentToast('Contraseña requerida');
+  //   }else if (this.confirm_pass != this.password) {
+  //     this.presentToast('Las contraseñas no coinciden');
+  //   }else{
       this.disabledButton = true;
       const loader = await this.loadingCtrl.create({
         message: 'Cargando...',
@@ -106,11 +106,12 @@ export class RegistroPage implements OnInit {
       return new Promise(resolve => {
         let body = {
           aksi: 'proses_register',
-          your_name: this.your_name,
-          gender: this.gender,
-          date_birth: this.date_birth,
-          email_address: this.email_address,
+          name: this.your_name,
+          genero: this.gender,
+          nacimiento: this.date_birth,
+          email: this.email_address,
           password: this.password,
+          password_confirmation: this.confirm_pass,
           telefono: this.telefono,
           document: this.document,
           document_number: this.document_number,
@@ -128,9 +129,9 @@ export class RegistroPage implements OnInit {
           hospital: this.hospital,
           urgencias: this.urgencias,
           imagen_perfil: this.imagen_perfil
-
+ 
         }
-        this.accsPrvds.postData(body, 'proses-api.php').subscribe((res: any) => {
+        this.accsPrvds.postData(body, 'register').subscribe((res: any) => {
           if(res.success==true){
             loader.dismiss();
             this.disabledButton = false;
@@ -147,7 +148,7 @@ export class RegistroPage implements OnInit {
             this.presentAlert('Timeot');
         });
       });
-    }
+  //   }
   }
 
   async presentToast(msg){

@@ -1,5 +1,202 @@
 <app-header></app-header>
+
 <ion-content color="secondary">
-  <h2 class="ion-text-center">Editar perfil</h2>
+
+  <ion-slides pager="true" >
+
+    <ion-slide color="secondary" class="slide-one">
+
+      <h4> Editar Información personal</h4>
+      
+      <div>
+       <ion-list lines="none" class="list">
+         
+        <ion-item class="item" color="secondary">
+          <ion-label position="floating"> Nombre:</ion-label>
+          <ion-input [(ngModel)]="your_name" placeholder="{{name}}" class="input"></ion-input>
+        </ion-item>
+         
+        <ion-item class="item" color="secondary">
+          <ion-label position="floating">Celular:</ion-label>
+          <ion-input [(ngModel)]="telefono"  placeholder="{{tel}}" type="tel" class="input"></ion-input>
+        </ion-item>
+
+        <ion-item class="item" color="secondary">
+          <ion-label position="floating">Tipo de documento:</ion-label>
+          <ion-select class="input" placeholder="{{doc}}" cancel-text="cancelar" ok-text="aceptar" [(ngModel)]="document" >
+             <ion-select-option>Cedula de ciudadania</ion-select-option>
+             <ion-select-option>Tarjeta de identidad</ion-select-option>
+             <ion-select-option>Registro civil </ion-select-option>
+             <ion-select-option>Pasaporte</ion-select-option>
+             <ion-select-option>Certificado nacido vivo</ion-select-option>
+             <ion-select-option>Cedula de extranjeria</ion-select-option>
+             <ion-select-option>Permiso especial de permanencia</ion-select-option>
+             <ion-select-option>Carnet diplomatico</ion-select-option>
+             <ion-select-option>Salvoconducto</ion-select-option>
+             <ion-select-option>Nit</ion-select-option>
+           </ion-select>
+        </ion-item>
+
+        <ion-item class="item" color="secondary">
+          <ion-label position="floating">Numero de documento:</ion-label>
+          <ion-input placeholder="{{docnumber}}" class="input" [(ngModel)]="document_number" ></ion-input>
+        </ion-item>
+        
+        <ion-item class="item" color="secondary">
+          <ion-label position="floating">EPS:</ion-label>
+          <ion-select class="input" placeholder="{{epss}}" cancel-text="cancelar" ok-text="aceptar" [(ngModel)]="eps">
+             <ion-select-option>AIC-EPSI</ion-select-option>
+             <ion-select-option>Aliansalud EPS</ion-select-option>
+             <ion-select-option>Ambuq EPS</ion-select-option>
+             <ion-select-option>Anas Wayuu</ion-select-option>
+             <ion-select-option>Asmet Salud EPS</ion-select-option>
+             <ion-select-option>Cajacopi EPS</ion-select-option>
+             <ion-select-option>Capital Salud EPS-S</ion-select-option>
+             <ion-select-option>Capresoca EPS</ion-select-option>
+             <ion-select-option>Comfachocó EPS-S</ion-select-option>
+             <ion-select-option>Comfacor</ion-select-option>
+             <ion-select-option>Comfaguajira</ion-select-option>
+             <ion-select-option>Comfamiliar EPS</ion-select-option>
+             <ion-select-option>Comfamiliar Cartagena</ion-select-option>
+             <ion-select-option>Comfamiliar Nariño</ion-select-option>
+             <ion-select-option>Comparta EPS-S</ion-select-option>
+             <ion-select-option>Compensar</ion-select-option>
+             <ion-select-option>Confasucre</ion-select-option>
+             <ion-select-option>Confaoriente EPS-S</ion-select-option>
+             <ion-select-option>Convisa EPS</ion-select-option>
+             <ion-select-option>Coomeva EPS</ion-select-option>
+             <ion-select-option>Coosalud</ion-select-option>
+             <ion-select-option>Cruz Blanca EPS</ion-select-option>
+             <ion-select-option>Dusakawi EPSi</ion-select-option>
+             <ion-select-option>Ecoopsos</ion-select-option>
+             <ion-select-option>Emssanar EPS</ion-select-option>
+             <ion-select-option>EPS Confenalco</ion-select-option>
+             <ion-select-option>EPS Sanitas</ion-select-option>
+             <ion-select-option>EPS S.O.S</ion-select-option>
+             <ion-select-option>Famisanar EPS</ion-select-option>
+             <ion-select-option>Mallamas EPS indigena</ion-select-option>
+             <ion-select-option>Medimas EPS</ion-select-option>
+             <ion-select-option>Mutual Ser</ion-select-option>
+             <ion-select-option>Nueva Eps</ion-select-option>
+             <ion-select-option>Pijaos Salud</ion-select-option>
+             <ion-select-option>Salud Total EPS</ion-select-option>
+             <ion-select-option>Savia Salud EPS</ion-select-option>
+             <ion-select-option>Sura EPS</ion-select-option>
+           </ion-select>
+        </ion-item>
+
+        <ion-item class="item" color="secondary">
+           <ion-label position="floating">Nombre del cuidador:</ion-label>
+           <ion-input placeholder="{{cuname}}" class="input" [(ngModel)]="cuidador_name" ></ion-input>
+        </ion-item>
+
+        <ion-item class="item" color="secondary">
+           <ion-label position="floating">Celular del cuidador:</ion-label>
+           <ion-input placeholder="{{cutel}}" class="input" type="tel" [(ngModel)]="cuidador_telefono" ></ion-input>
+        </ion-item>
+        <ion-grid fixed>
+          
+          <ion-row>
+              <ion-col size="">
+                 
+              </ion-col>
+  
+              <ion-col size="8">
+                  <ion-button  (click)="uploadPicture()" color="primary"  class="mx-auto d-block">
+                       foto de perfil
+                   </ion-button>
+              </ion-col>
+
+              <ion-col size="">
+                 
+              </ion-col>
+  
+              
+          </ion-row>
+      </ion-grid>
+      <img *ngIf="imagen_perfil" [src]="imagen_perfil" alt="imagen_perfil" class="mx-auto d-block">
+       </ion-list>
+      </div>
+      <ion-button  (click)="uploadPicture()" color="success"  class="mx-auto d-block">
+        Guardar
+    </ion-button>
+    <br>
+    </ion-slide>
+
+   <ion-slide>
+     <h4> Editar datos sobre la enfermedad</h4>
+
+     <div>
+       <ion-list lines="none" class="list">
+
+       <ion-item class="item" color="secondary">
+           <ion-label position="floating">Tipo de cancer:</ion-label>
+           <ion-select class="input" placeholder="{{tipo}}" cancel-text="cancelar" ok-text="aceptar" [(ngModel)]="cancer_tipo">
+              <ion-select-option>1</ion-select-option>
+              <ion-select-option>2</ion-select-option>
+           </ion-select>  
+      </ion-item>
+
+         <ion-item class="item" color="secondary">
+           <ion-label position="floating">Estadio:</ion-label>
+            <ion-select class="input" placeholder="{{esta}}" cancel-text="cancelar" ok-text="aceptar" [(ngModel)]="estadio" >
+              <ion-select-option>0</ion-select-option>
+              <ion-select-option>1</ion-select-option>
+              <ion-select-option>2</ion-select-option>
+              <ion-select-option>3</ion-select-option>
+              <ion-select-option>4</ion-select-option>
+            </ion-select>
+         </ion-item>
+         
+         <ion-item class="item" color="secondary">
+           <ion-label position="floating">Fecha de diagnostico:</ion-label>
+           <ion-datetime displayFormat="DD/MMM/YYYY" placeholder="{{diagdate}}" class="input" Cancel-text="cancelar" Done-text="Aceptar" [(ngModel)]="date_diagnostico" ></ion-datetime>
+         </ion-item>
+
+         <ion-item class="item" color="secondary">
+           <ion-label position="floating">Presencia de comorbilidades:</ion-label>
+           <ion-input placeholder="{{como}}" class="input"[(ngModel)]="comorbilidades" ></ion-input>
+         </ion-item>
+       </ion-list>
+     </div>
+     <ion-button  (click)="uploadPicture()" color="success"  class="mx-auto d-block">
+      Guardar
+  </ion-button>
+   </ion-slide>
+
+<ion-slide>
+ <h4> Editar contactos</h4>
+ <div>
+  <ion-list lines="none" class="list">
+    <ion-item class="item" color="secondary">
+           <ion-label position="floating"> Medico tratante:</ion-label>
+           <ion-input placeholder="{{med}}" class="input"[(ngModel)]="medico_tratante" ></ion-input>
+    </ion-item>
+         
+    <ion-item class="item" color="secondary">
+           <ion-label position="floating">Farmacia:</ion-label>
+           <ion-input placeholder="{{farm}}" class="input" [(ngModel)]="farmacia" ></ion-input>
+    </ion-item>
+         
+    <ion-item class="item" color="secondary">
+           <ion-label position="floating">Hospital de tratamiento:</ion-label>
+           <ion-input placeholder="{{hos}}" class="input"[(ngModel)]="hospital"></ion-input>
+    </ion-item>
+         
+    <ion-item class="item" color="secondary">
+           <ion-label position="floating">Urgencias:</ion-label>
+           <ion-input placeholder="{{urg}}" class="input"[(ngModel)]="urgencias" ></ion-input>
+    </ion-item>
+
+    <ion-button  (click)="uploadPicture()" color="success"  class="mx-auto d-block">Guardar</ion-button>
+
+  </ion-list>
+
+ </div>
+
+
+</ion-slide>
+
+  </ion-slides>
 </ion-content>
 <app-footer></app-footer>

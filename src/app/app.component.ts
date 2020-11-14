@@ -33,9 +33,9 @@ export class AppComponent {
     });
     this.storage.get('storage_xxx').then((res) => {
       if (res == null){
-        this.navCtrl.navigateRoot('/action-sheet');
-      } else{
         this.navCtrl.navigateRoot('/inicio');
+      } else{
+        this.navCtrl.navigateRoot('/action-sheet');
       }
     });
   }

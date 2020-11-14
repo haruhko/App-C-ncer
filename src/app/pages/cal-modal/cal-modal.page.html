@@ -9,26 +9,18 @@
 <ion-content color="secondary">
 
 
- <ion-slides mode="ios" pager="ios" scrollbar="ios">
-   <ion-slide>
-     <ion-card>
+ <ion-slides pager="true">
+   
+  <ion-slide>
 
-      <ion-item 
-      class="item"
-      color="secondary">
-       <ion-label position="floating">
-         Nombre:
-       </ion-label>
-       <ion-input 
-       placeholder="" 
-       class="input"
-       ></ion-input>
+      <ion-item class="item" color="secondary">
+       <ion-label position="floating">Nombre:</ion-label>
+       <ion-input placeholder="" class="input"></ion-input>
       </ion-item>
 
       <ion-item class="item" color="secondary">
         <ion-label position="floating"l>Medida:</ion-label>
-        <ion-select placeHolder="seleccione" class="input"  cancel-text="Cancelar"
-        ok-text="Aceptar" scrollbar="ios" mode="ios">
+        <ion-select placeHolder="seleccione" class="input"  cancel-text="Cancelar"ok-text="Aceptar">
             <ion-select-option>mg</ion-select-option>
             <ion-select-option>mcg</ion-select-option>
             <ion-select-option>ml</ion-select-option>
@@ -38,39 +30,29 @@
             <ion-select-option>tabletas</ion-select-option>
             <ion-select-option>otros</ion-select-option>
         </ion-select>
-    </ion-item>
+      </ion-item>
 
-    <ion-item 
-    class="item"
-    color="secondary">
-     <ion-label position="floating">
-       Dosis:
-     </ion-label>
-     <ion-input 
-     placeholder="" 
-     class="input"
-     ></ion-input>
-    </ion-item>
+      <ion-item class="item" color="secondary">
+       <ion-label position="floating">Dosis:</ion-label>
+       <ion-input placeholder="" class="input"></ion-input>
+      </ion-item>
 
-    <ion-item class="item" color="secondary">
-      <ion-label position="floating">Frecuencia:</ion-label>
-      <ion-select placeHolder="seleccione" class="input"  cancel-text="Cancelar"
-      ok-text="Aceptar" scrollbar="ios" mode="ios">
+      <ion-item class="item" color="secondary">
+       <ion-label position="floating">Frecuencia:</ion-label>
+       <ion-select placeHolder="seleccione" class="input"  cancel-text="Cancelar" ok-text="Aceptar">
           <ion-select-option>cada 4 horas</ion-select-option>
           <ion-select-option>1 vez al día</ion-select-option>
           <ion-select-option>2 veces al día</ion-select-option>
           <ion-select-option>3 veces al día</ion-select-option>
           <ion-select-option>4 veces al día</ion-select-option>
-      </ion-select>
+        </ion-select>
       </ion-item>
-
-     </ion-card>
-  
-    
+<br>
+<br>
    </ion-slide>
-   <ion-slide>
-     <ion-card>
 
+   <ion-slide>
+     
       <ion-item class="item" color="secondary">
           <ion-label position="floating">Fecha de iniciación:</ion-label>
           <ion-datetime placeHolder="DD/MM/AAAA" displayFormat="DD/MM/YYYY" class="input"  cancel-text="Cancelar"
@@ -81,59 +63,41 @@
           <ion-datetime placeHolder="DD/MM/AAAA" displayFormat="DD/MM/YYYY" class="input"  cancel-text="Cancelar"
           done-text="Aceptar"></ion-datetime>
       </ion-item>
-      <ion-item class="item" color="secondary">
-        <!--cambiar checkbox por toggle button-->
-        
-        <ion-label >Recordatorio automático</ion-label>
-        <ion-checkbox color="secondary" ></ion-checkbox>
-      </ion-item>
 
-      <ion-item 
-      class="item"
-      color="secondary">
-       <ion-label position="floating">
-         Instrucciones de Uso:
-       </ion-label>
-       <ion-textarea 
-       placeholder="" 
-       class="input"
-       ></ion-textarea>
+      <ion-item color="secondary">
+            <ion-label>Recordatorio automático</ion-label>
+            <ion-toggle slot="end"></ion-toggle>
       </ion-item>
-     </ion-card>
+     
+      <ion-item class="item"color="secondary">
+       <ion-label position="floating">Instrucciones de Uso:</ion-label>
+       <ion-textarea placeholder="" class="input"></ion-textarea>
+      </ion-item>
+     
    </ion-slide>
   
    <ion-slide>
-     <ion-card color="secondary">
-       <ion-card-header>
-         <ion-card-subtitle>Foto</ion-card-subtitle> 
-       </ion-card-header>
-       <ion-card-content>
-        <button>Seleccionar archivo</button>
-        <br>
-        <p>https://www.youtube.com/watch?v=u4FWNL0PBBo&ab_channel=nicobytes</p>
-        <div>
-          <img src="https://picsum.photos/200/300?random=1" >
-        </div>
+
+    <ion-grid fixed>
+      <ion-row>
+
+        <ion-col size=""></ion-col>
+  
+        <ion-col size="8">
+            <ion-button  (click)="uploadPicture()" color="primary"  class="mx-auto d-block button1">Agregar Foto de medicamento</ion-button>
+        </ion-col>
+  
+        <ion-col size=""></ion-col>
+  
+      </ion-row>
+    </ion-grid>
+
+    <img *ngIf="imagen_perfil" [src]="imagen_perfil" alt="imagen_perfil" class="mx-auto d-block">
        
-       </ion-card-content>
-     </ion-card>
-    
-    
    </ion-slide>
 
  </ion-slides>
   
-   
-    
-  
-
-  
-  
-  
-      
-  
-
- 
 </ion-content>
 
 <ion-footer  color="primary">
@@ -144,8 +108,6 @@
   <ion-buttons slot="end">
     <ion-button (click)="onClick()" color="success" fill="clear"> Agregar</ion-button>
   </ion-buttons>
-  
 </ion-toolbar>
-
 
 </ion-footer>

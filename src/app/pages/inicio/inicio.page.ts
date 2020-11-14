@@ -113,11 +113,11 @@ export class InicioPage implements OnInit {
       return new Promise(resolve => {
         let body = {
           aksi: 'proses_login',
-          email_address: this.email_address,
+          email: this.email_address,
           password: this.password
         }
-        this.accsPrvds.postData(body, 'proses-api.php').subscribe((res: any) => {
-          if(res.success==true){
+        this.accsPrvds.postData(body, 'login').subscribe((res: any) => {
+          if(res.token){
             loader.dismiss();
             this.disabledButton = false;
             this.presentToast('Inicio de sesión exitoso.');

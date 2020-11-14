@@ -1,5 +1,27 @@
 <app-header></app-header>
 <ion-content color="secondary">
-  <h2 class="ion-text-center">Cambio de Contraseña</h2>
+  <h2 class="ion-text-center">Cambiar de Contraseña</h2>
+  <ion-list lines="none" class="list">
+         
+          <ion-item class="item" color="secondary">
+            <ion-label position="floating">Contraseña Actual:</ion-label>
+            <ion-input [(ngModel)]="email_address" placeholder="" class="input" type="password"></ion-input>
+          </ion-item>
+          
+          <ion-item class="item" color="secondary">
+            <ion-label position="floating">Contraseña Nueva:</ion-label>
+            <ion-input [(ngModel)]="password" placeholder="" type="password"class="input"></ion-input>
+          </ion-item>
+          
+          <ion-item class="item" color="secondary">
+            <ion-label position="floating">Confirmación de contraseña:</ion-label>
+            <ion-input [(ngModel)]="confirm_pass" placeholder="" class="input" type="password"></ion-input>
+          </ion-item>
+           
+        </ion-list>
+
+        <ion-button (click)="onClick()" expand="block" color="success">
+          Guardar
+        </ion-button>
 </ion-content>
 <app-footer></app-footer>

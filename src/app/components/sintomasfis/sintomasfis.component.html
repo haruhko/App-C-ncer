@@ -22,15 +22,22 @@
    ></ion-textarea>
    </ion-item>
  
+   <ion-grid fixed>
+           
+    <ion-row>
+        <ion-col size=""></ion-col>
 
-  
-    <ion-button fill="outline" class="btn1 mx-auto d-block" expand="small" >
-      {{sintomasfis.button}}
-     </ion-button>
-     <br>
-     <div>
-      <img src="https://picsum.photos/200/300?random=1" class="mx-auto d-block">
-     </div>
+        <ion-col size="8">
+            <ion-button  (click)="uploadPicture()" color="primary"  class="mx-auto d-block">{{sintomasfis.button}}</ion-button>
+        </ion-col>
+
+        <ion-col size=""></ion-col>
+
+    </ion-row>
+</ion-grid>
+
+<img *ngIf="imagen_perfil" [src]="imagen_perfil" alt="imagen_perfil" class="mx-auto d-block">
+
      <ion-button fill="clear" expand="block" color="success" (click)="save()">
       {{sintomasfis.save}}
     </ion-button>

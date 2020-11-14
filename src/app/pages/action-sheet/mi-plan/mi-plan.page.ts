@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController, ModalController } from '@ionic/angular';
+import { IonItemSliding, MenuController, ModalController } from '@ionic/angular';
 import {MiplanModalPage} from '../../miplan-modal/miplan-modal.page';
 
 @Component({
@@ -8,14 +8,15 @@ import {MiplanModalPage} from '../../miplan-modal/miplan-modal.page';
   styleUrls: ['./mi-plan.page.scss'],
 })
 export class MiPlanPage implements OnInit {
+  automaticClose = false;
 
-  constructor(private menuCtrl: MenuController, private modalCtrl: ModalController) { }
+  constructor(
+    private menuCtrl: MenuController, 
+    private modalCtrl: ModalController) { }
 
   ngOnInit() {
   }
-  Add(){
-    
-  }
+
   toggleMenu(){
     this.menuCtrl.toggle();
   }
@@ -27,5 +28,14 @@ export class MiPlanPage implements OnInit {
     });
     await (await modal).present();
   }
+
+  cerrar(itemSlide: any){
+    this.automaticClose = !this.automaticClose;
+    itemSlide.item['opened'] = true;
+  }
+
+
+
+
 
 }
