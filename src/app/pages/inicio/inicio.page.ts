@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { ActionSheetController, AlertController, LoadingController, ToastController, NavController } from '@ionic/angular';
 import { Button } from 'protractor';
 import { Storage } from '@ionic/storage';
-import { AccessProviders } from 'src/app/providers/access_providers';
+import { AccessProviders } from '../../providers/access_providers';
 
 @Component({
   selector: 'app-inicio',

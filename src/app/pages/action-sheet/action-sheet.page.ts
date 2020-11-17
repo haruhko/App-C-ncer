@@ -4,7 +4,7 @@ import { AlertController, LoadingController, MenuController, PopoverController, 
 import { PopoverInfoComponent } from 'src/app/components/popover-info/popover-info.component';
 import {componente} from '../../interfaces/interfaces';
 import {AuthService} from '../../servicios/auth.service';
-import { AccessProviders } from 'src/app/providers/access_providers';
+import { AccessProviders } from '../../providers/access_providers';
 import { Storage } from '@ionic/storage';
 
 
